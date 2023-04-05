@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-05T21:45:24.310Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15" etag="hRM81XIdYRRUKXgXrMqE" version="21.1.4" type="gitlab" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-04-05T21:47:10.263Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="u6oc78DVgjUafG8R6SWf" version="21.1.4" type="gitlab" pages="2">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="ERD">
-    <mxGraphModel dx="2074" dy="1917" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="2284" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -470,7 +470,7 @@
             <mxRectangle width="220" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oEP7rS-N46JQyzD8IjwW-1" value="car_id (int)" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="1" vertex="1">
+        <mxCell id="oEP7rS-N46JQyzD8IjwW-1" value="car_id (int)" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="1">
           <mxGeometry x="535" y="430" width="340" height="30" as="geometry">
             <mxRectangle width="340" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -506,7 +506,7 @@
             <mxRectangle width="220" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oEP7rS-N46JQyzD8IjwW-2" value="user_id (int)" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="1" vertex="1">
+        <mxCell id="oEP7rS-N46JQyzD8IjwW-2" value="user_id (int)" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="1">
           <mxGeometry x="535" y="450" width="340" height="30" as="geometry">
             <mxRectangle width="340" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -540,6 +540,11 @@
         <mxCell id="XRrBWBFkgpjNnWsR91gw-4" value="Protection plan (money)" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="1">
           <mxGeometry x="535" y="390" width="340" height="30" as="geometry">
             <mxRectangle width="340" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QfXiT0cScSW4rEsmxDnp-8" value="car_distance varchar(500) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="211" y="268" width="230" height="30" as="geometry">
+            <mxRectangle width="220" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
       </root>
