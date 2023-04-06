@@ -1,1 +1,1 @@
-Attached are git commands to make things easier for us to branch, merge, pull, and push from the master branch. Whenever we create the master branch.
+Attached are git commands to make things easier for us to branch, merge, pull, and push from the master branch. Whenever we create the master branch.![git-commands](uploads/4a5422b9d7419d4b8acefbdb43815c0d/git-commands.png)
