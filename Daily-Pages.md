@@ -1,4 +1,4 @@
-MEETINGS/ROLES (SRUM Master, Scribe, Technical/Researcher, DevOps) 
+MEETINGS/ROLES (SCRUM Master, Scribe, Technical/Researcher, DevOps) 
    Cedrick --
    Mason --
    Sydney -- 
