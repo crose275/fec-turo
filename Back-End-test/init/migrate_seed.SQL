@@ -249,3 +249,65 @@ INSERT INTO cars(
 
         If a host sends you an invoice, we’ll notify you via email and display a notification in your Turo activity feed. You have 48 hours to pay or dispute the invoice. Click on the link in the email or notification or open Trip details for the trip in question to view the invoice. Then tap “Accept and pay” or “Dispute.”  If you’ve booked a trip with a Commercial Host, they’re unable to invoice you for incidental costs via Turo and will contact you directly to resolve any reimbursement issues.',
         1);
+
+----------------- Features Seeding -----------------
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Must be 21+ to book', 'turo\Front-End\turo\src\media\featureIcons\21+.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('All-wheel drive', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Apple Car Play', 'turo\Front-End\turo\src\media\featureIcons\appleCarPlay.PNG', 1);
+   
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Automic transmission', 'turo\Front-End\turo\src\media\featureIcons\automatic.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('AUX Input', 'turo\Front-End\turo\src\media\featureIcons\auxInput.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Bluetooth', 'turo\Front-End\turo\src\media\featureIcons\bluetooth.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Convertible', 'turo\Front-End\turo\src\media\featureIcons\convertible.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Heated Seats', 'turo\Front-End\turo\src\media\featureIcons\heatedseats.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Long-Term-Car', 'turo\Front-End\turo\src\media\featureIcons\longTerm.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Sunroof', 'turo\Front-End\turo\src\media\featureIcons\sunroof.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('USB Charger', 'turo\Front-End\turo\src\media\featureIcons\usbCharger.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Leather Seats', 'turo\Front-End\turo\src\media\featureIcons\generic.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Backup Camera', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Child Seat', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('GPS', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Keyless Entry', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Snow tires or chains', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Toll Pass', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('USB Input', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+INSERT INTO features( feature_description, feature_icon, car_id)
+   VALUES ('Fastrak', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
