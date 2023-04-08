@@ -1,5 +1,10 @@
 // imports express 
-const express = require('express')
+const express = require('express');
+// creates an express application
+const app = express();
+app.use(express.json())
+// sets up port to first look for an env file for port number, then defaults to port 8001
+const port = process.env.PORT || 8001;
 // imports cors for allowing cross origin requests
 const cors = require('cors');
 app.use(
@@ -7,19 +12,16 @@ app.use(
       origin:"*"
     })
   );
-// creates an express application
-const app = express();
-// sets up port to first look for an env file for port number, then defaults to port 8001
-const port = process.env.PORT || 8001;
-
 // imports and mounts body-parser middleware to access contents of request body
 const bodyParser = require('body-parser');
+
+
 app.use(bodyParser.json());
 
 //making sure that the port is working we can commit the below out after
-// app.get("/", (req, res)=>{
-//     res.send('this is a test... this is only a test')
-// })
+app.get("/", (req, res)=>{
+    res.send('Hey team(Mr.Money, Mrs.Battle-Buddy, and Mr.Scrum-Gerneral the back end has been deployed')
+})
 // GET request for car photos where car_id = req param id 
 app.get('/:id/photos', async (req, res)=>{
     const id = req.params.id
@@ -101,7 +103,7 @@ app.get('/reviews/:id', async (req, res)=>{
 })
 
 app.listen(port, ()=>{
-    console.log("listening on port ", port)
-    console.log("connecting to postgres pool: ", pool)
+    // console.log("listening on port ", port)
+    // console.log("connecting to postgres pool: ", pool)
 })
 
