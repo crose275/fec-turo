@@ -111,15 +111,22 @@ CREATE TABLE IF NOT EXISTS reservations(
     reservation_trip_fee int, 
     reservation_young_driver_fee boolean, 
     reservation_total_cost int, 
-    reservation_extras_chosen int, 
-    reservation_extra_number_available int, 
-    reservation_extra_cost int, 
-    reservation_description varchar(100),
-    reservation_extra_name varchar(100),
+    reservation_extras_cost int,
     car_id int, 
     user_id int,
     FOREIGN KEY (car_id) REFERENCES cars(id),
     FOREIGN KEY (user_id) REFERENCES users(id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS extras(
+    id serial NOT NULL, 
+    extra_number_available int, 
+    extra_cost int, 
+    extra_description varchar(100),
+    extra_name varchar(100),
+    car_id int, 
+    FOREIGN KEY (car_id) REFERENCES cars(id),
     PRIMARY KEY (id)
 );
 
@@ -140,7 +147,7 @@ INSERT INTO hosts(
 
 --------------- User Seeding --------------
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Sam', 'password' , 'sam.fake@gmail.com', 23, 'No file');
+   VALUES ('Sam', 'password' , 'sam.fake@gmail.com', 23, 'turo\Front-End\turo\src\media\profileIcons\SamIcon.PNG');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
    VALUES ('Christina', 'password', 'christina.fake@gmail.com', 25, 'No file'); 
@@ -181,6 +188,66 @@ INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_p
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
    VALUES ('Michelle', 'password' , 'michelle.fake@gmail.com', 25, 'No file');
 
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Turo', 'password' , 'turo.fake@gmail.com', 00, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Steven', 'password' , 'steven.fake@gmail.com', 30, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Torian', 'password' , 'torian.fake@gmail.com', 28, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Jason', 'password' , 'jason.fake@gmail.com', 35, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Isamel', 'password' , 'isamel.fake@gmail.com', 20, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Samantha', 'password' , 'samantha.fake@gmail.com', 40, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Marta', 'password' , 'marta.fake@gmail.com', 38, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Gregg', 'password' , 'turo.fake@gmail.com', 24, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Andrea', 'password' , 'andrea.fake@gmail.com', 30, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Phillip', 'password' , 'phillip.fake@gmail.com', 32, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Justin', 'password' , 'turo.fake@gmail.com', 40, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Kitty', 'password' , 'kitty.fake@gmail.com', 30, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Shaween', 'password' , 'shaween.fake@gmail.com', 22, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Kacie', 'password' , 'kacie.fake@gmail.com', 35, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Alizabeth', 'password' , 'alizabeth.fake@gmail.com', 30, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Bryan', 'password' , 'bryan.fake@gmail.com', 40, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Grant', 'password' , 'grant.fake@gmail.com', 32, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Ramon', 'password' , 'ramon.fake@gmail.com', 33, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Joseph', 'password' , 'joseph.fake@gmail.com', 32, 'No file');
+
+INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
+   VALUES ('Ramesh', 'password' , 'ramesh.fake@gmail.com', 31, 'No file');
+   
 
 --------------- Review Seeding --------------
 INSERT INTO reviews(review_rating, review_date, review_message, review_host_response, car_id, user_id)
@@ -311,3 +378,24 @@ INSERT INTO features( feature_description, feature_icon, car_id)
 
 INSERT INTO features( feature_description, feature_icon, car_id)
    VALUES ('Fastrak', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG', 1);
+
+----------------- Features Seeding -----------------
+
+INSERT INTO extras(extra_number_available, extra_cost, extra_description, extra_name, car_id)
+   VALUES (0, 50, 'Driver and passenger roof panels.', 'Camper shell', 1);
+
+INSERT INTO extras(extra_number_available, extra_cost, extra_description, extra_name, car_id)
+   VALUES (0, 125, 'Removal of roof, only for trips 2 days or less.', 'Camper shell', 1);
+
+INSERT INTO extras(extra_number_available, extra_cost, extra_description, extra_name, car_id)
+   VALUES (1, 50, 'WiFi Connectivity  • In-car productivity & entertainment with Wi-Fi hotspot for up to 5 devices', 'Portable WiFi hotspot', 1);
+
+INSERT INTO extras(extra_number_available, extra_cost, extra_description, extra_name, car_id)
+   VALUES (1, 50, 'Car seat available, please provide age of child.', 'Child Safety Seat', 1);
+
+INSERT INTO extras(extra_number_available, extra_cost, extra_description, extra_name, car_id)
+   VALUES (0, 100, 'Save time, make drop-off a breeze, and avoid additional fees by adding this Extra, which allows you to return my car at any fuel level. Price includes up to a full tank of gas.', 'Prepaid refuel', 1);
+
+INSERT INTO extras(extra_number_available, extra_cost, extra_description, extra_name, car_id)
+   VALUES (1, 10, 'Cooler, per your request ', 'Cooler', 1);
+
