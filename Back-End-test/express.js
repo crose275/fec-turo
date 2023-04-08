@@ -2,7 +2,11 @@
 const express = require('express')
 // imports cors for allowing cross origin requests
 const cors = require('cors');
-
+app.use(
+    cors({
+      origin:"*"
+    })
+  );
 // creates an express application
 const app = express();
 // sets up port to first look for an env file for port number, then defaults to port 8001
