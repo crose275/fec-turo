@@ -11,6 +11,10 @@ const port = process.env.PORT || 8001;
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+//making sure that the port is working we can commit the below out after
+// app.get("/", (req, res)=>{
+//     res.send('this is a test... this is only a test')
+// })
 // GET request for car photos where car_id = req param id 
 app.get('/:id/photos', async (req, res)=>{
     //try
@@ -19,7 +23,6 @@ app.get('/:id/photos', async (req, res)=>{
 
 
 })
-
 // GET request for car at parameter id 
 app.get('/:id/car', async (req, res)=>{
         //try
