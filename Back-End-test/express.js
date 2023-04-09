@@ -15,7 +15,6 @@ app.use(
 // imports and mounts body-parser middleware to access contents of request body
 const bodyParser = require('body-parser');
 
-
 app.use(bodyParser.json());
 
 //making sure that the port is working we can commit the below out after
