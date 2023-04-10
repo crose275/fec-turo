@@ -1,0 +1,18 @@
+.FooterBottomList{
+    display: flex;
+    width: 100%;
+    padding: 32px;
+}
+
+.clickableOptions{
+    display: flex;
+}
+
+.clickableOption{
+    margin: 30px;
+}
+
+.clickableOption:hover{
+    cursor: pointer;
+    border-bottom: solid black 2px;
+}

@@ -1,8 +1,8 @@
 .FooterNav{
     width: 100%;
-    background: #F4F4F4;
-    border: 1px solid #E7E7E8;
-    padding: 32px 5vw;
+    border-bottom: 1px solid #E7E7E8;
+
+    padding: 32px;
 }
 
 .FooterNavOptions{

@@ -1,0 +1,25 @@
+.AppIconsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-left: 40px;
+}
+
+.AppleAppIcon{
+    height: 60px;
+    width: fit-content;
+    align-items: center;
+}
+
+.GoogleAppIcon{
+    height: 70px;
+    width: fit-content;
+    align-items: center;
+}
+
+.AppleAppIcon:hover, .GoogleAppIcon:hover{
+    cursor: pointer;
+}
