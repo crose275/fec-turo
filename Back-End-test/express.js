@@ -31,8 +31,8 @@ app.get('/:id/photos', async (req, res)=>{
     } catch(err) {
         res.status(404).send('Not Found')
     }
-
 })
+
 // GET request for car at parameter id 
 app.get('/car/:id', async (req, res)=>{
     const id = req.params.id
