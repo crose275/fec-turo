@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node express.js",
     "dev": "nodemon express.js",
-    "migrate": "node ./init/migrate_seed.SQL"
+    "seed": "node ./migrate_seed/seed.js",
+    "migrate": "node ./migrate_seed/migrate.js"
   },
   "author": "",
   "license": "ISC",

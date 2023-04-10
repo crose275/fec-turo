@@ -27,8 +27,7 @@ services:
       POSTGRES_DB: Turo_webpage
     ports:
       - "5432:5432"
-    volumes:
-      - ./init/migrate_seed.SQL:/docker-entrypoint-initdb.d/seed.sql
+
 
 
   pgadmin:
