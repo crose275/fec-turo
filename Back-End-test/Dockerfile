@@ -9,4 +9,4 @@ RUN npm install
 
 COPY . . 
 EXPOSE 8100
-CMD [ "nodemon", "index.js"]
+CMD [ "nodemon", "express.js"]

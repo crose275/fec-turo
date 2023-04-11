@@ -13,7 +13,7 @@ services:
       - "8100:8100"
 
 
-    command: ["nodemon", "index.js"]
+    command: ["nodemon", "express.js"]
 
   postgres-db-turo:
     container_name: postgres-db-turo
