@@ -138,6 +138,17 @@ app.get('/car/:id/reviews', async (req, res)=>{
         /* SELECT * FROM reviews WHERE car_id = param id */ 
 })
 
+app.get('/car/:id/locations', async (req, res)=>{
+    const id = req.params.id;
+    try {
+        const locations = await pool.query(`SELECT * FROM locations WHERE car_id = $1`, [id])
+
+        res.json(locations)
+    } catch {
+        res.status(404).send("Not Found")
+    }
+})
+
 app.listen(port, ()=>{
     console.log("listening on port ", port)
     // console.log("connecting to postgres pool: ", pool)
