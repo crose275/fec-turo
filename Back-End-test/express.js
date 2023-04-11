@@ -81,10 +81,10 @@ app.get('/host/:id', async (req, res)=>{
     const id = req.params.id
     try {
         const host = await pool.query(`
-                    SELECT host.* 
-                    FROM car 
-                    JOIN host ON car.host_id = host.id 
-                    WHERE car.id = req param id`, [id])
+                    SELECT hosts.* 
+                    FROM cars 
+                    JOIN hosts ON cars.host_id = hosts.id 
+                    WHERE cars.id = $1`, [id])
     
         res.json(host.rows)
     } catch(err) {
@@ -95,7 +95,11 @@ app.get('/host/:id', async (req, res)=>{
 app.get('/features/:id', async (req, res)=>{
     const id = req.params.id
     try {
-        const features = await pool.query('SELECT * FROM car_features WHERE car_id = $1', [id])
+        const features = await pool.query(`
+        SELECT features.*, car_features.id AS car_feature_id
+        FROM car_features
+        JOIN features ON car_features.feature_id = features.id
+        WHERE car_features.car_id = $1`, [id]);
 
         res.json(features.rows)
     } catch(err) {
@@ -107,7 +111,7 @@ app.get('/features/:id', async (req, res)=>{
 app.get('/extras/:id', async (req, res)=>{
     const id = req.params.id;
     try {
-        const extras = await pool.query('SELECT * FROM car_extras WHERE car_id = $1', [id])
+        const extras = await pool.query('SELECT * FROM extras WHERE car_id = $1', [id])
 
         res.json(extras.rows)
 
@@ -120,7 +124,11 @@ app.get('/extras/:id', async (req, res)=>{
 app.get('/reviews/:id', async (req, res)=>{
     const id = req.params.id;
     try {
-        const reviews = await pool.query('SELECT * FROM reviews WHERE car_id = $1', [id])
+        const reviews = await pool.query(`
+        SELECT reviews.*, users.user_name, users.user_profile_pic AS picture
+        FROM reviews
+        JOIN users ON reviews.user_id = users.id
+        WHERE car_id = $1`, [id])
 
         res.json(reviews.rows)
 
