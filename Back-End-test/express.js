@@ -1,3 +1,25 @@
+const { Pool } = require('pg');
+
+const pool = new Pool({
+    user: 'oxubpjhkxcbbwh' || 'postgres',
+    host: 'ec2-3-208-74-199.compute-1.amazonaws.com'||'127.0.0.1',
+    database: 'db2a924gf5p4sd' || 'Turo_webpage',
+    password: 'e07dcf9f202d697e727fa8e907dbad13523c5c0386de42f3bbee94920f09fd70' || 'password',
+    port: 5432,
+    connectionString: process.env.DATABASE_URL, 
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
+
+pool.connect((err, client, release) => {
+    if (err) {
+      return console.error('Error acquiring client', err.stack)
+    }
+    console.log(process.env.DATABASE_URL)
+    console.log('Connected to database')
+  })
+
 // imports express 
 const express = require('express');
 // creates an express application
@@ -19,7 +41,14 @@ app.use(bodyParser.json());
 
 //making sure that the port is working we can commit the below out after
 app.get("/", (req, res)=>{
-    res.send('Hey team(Mr.Money, Mrs.Battle-Buddy, and Mr.Scrum-Gerneral the back end has been deployed')
+    pool.query(`SELECT * FROM cars`, (error, data)=>{
+        if(error){
+            console.log(error)
+            res.send(error)
+        }
+        
+        res.send(data.rows);
+    })
 })
 // GET request for car photos where car_id = req param id 
 app.get('/:id/photos', async (req, res)=>{
@@ -27,7 +56,7 @@ app.get('/:id/photos', async (req, res)=>{
     try {
         const photos = await pool.query('SELECT * FROM photos WHERE car_id = $1', [id])
     
-        res.json(photos)
+        res.json(photos.rows)
     } catch(err) {
         res.status(404).send('Not Found')
     }
@@ -39,7 +68,7 @@ app.get('/car/:id', async (req, res)=>{
     try {
         const car = await pool.query('SELECT * FROM cars WHERE id = $1', [id])
     
-        res.json(car)
+        res.json(car.rows)
     } catch(err) {
         res.status(404).send('Not Found')
     }
@@ -57,7 +86,7 @@ app.get('/host/:id', async (req, res)=>{
                     JOIN host ON car.host_id = host.id 
                     WHERE car.id = req param id`, [id])
     
-        res.json(host)
+        res.json(host.rows)
     } catch(err) {
         res.status(404).send('Not Found')
     }
@@ -68,7 +97,7 @@ app.get('/features/:id', async (req, res)=>{
     try {
         const features = await pool.query('SELECT * FROM car_features WHERE car_id = $1', [id])
 
-        res.json(features)
+        res.json(features.rows)
     } catch(err) {
         res.status(404).send('Not Found')
     }
@@ -80,7 +109,7 @@ app.get('/extras/:id', async (req, res)=>{
     try {
         const extras = await pool.query('SELECT * FROM car_extras WHERE car_id = $1', [id])
 
-        res.json(extras)
+        res.json(extras.rows)
 
     } catch{
         res.status(404).send('Not Found')
@@ -93,7 +122,7 @@ app.get('/reviews/:id', async (req, res)=>{
     try {
         const reviews = await pool.query('SELECT * FROM reviews WHERE car_id = $1', [id])
 
-        res.json(reviews)
+        res.json(reviews.rows)
 
     } catch{
         res.status(404).send('Not Found')
