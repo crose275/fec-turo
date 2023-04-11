@@ -51,7 +51,7 @@ app.get("/", (req, res)=>{
     })
 })
 // GET request for car photos where car_id = req param id 
-app.get('/:id/photos', async (req, res)=>{
+app.get('/car/:id/photos', async (req, res)=>{
     const id = req.params.id
     try {
         const photos = await pool.query('SELECT * FROM photos WHERE car_id = $1', [id])
@@ -77,7 +77,7 @@ app.get('/car/:id', async (req, res)=>{
 })
 
 // GET Request for host info for the owner of car
-app.get('/host/:id', async (req, res)=>{
+app.get('/car/:id/host', async (req, res)=>{
     const id = req.params.id
     try {
         const host = await pool.query(`
@@ -92,7 +92,7 @@ app.get('/host/:id', async (req, res)=>{
     }
 })
 // GET REQUEST FOR car_features where car_id = param_id
-app.get('/features/:id', async (req, res)=>{
+app.get('/car/:id/features', async (req, res)=>{
     const id = req.params.id
     try {
         const features = await pool.query(`
@@ -108,7 +108,7 @@ app.get('/features/:id', async (req, res)=>{
         
 })
 // GET Request for car_extras where car_id = req param id
-app.get('/extras/:id', async (req, res)=>{
+app.get('/car/:id/extras', async (req, res)=>{
     const id = req.params.id;
     try {
         const extras = await pool.query('SELECT * FROM extras WHERE car_id = $1', [id])
@@ -121,7 +121,7 @@ app.get('/extras/:id', async (req, res)=>{
             /* SELECT * FROM car_extras WHERE car_id = param id */ 
 })
 // GET Request for reviews where car id = parm_id
-app.get('/reviews/:id', async (req, res)=>{
+app.get('/car/:id/reviews', async (req, res)=>{
     const id = req.params.id;
     try {
         const reviews = await pool.query(`
