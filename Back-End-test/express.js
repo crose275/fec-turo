@@ -37,7 +37,7 @@ app.get('/:id/photos', async (req, res)=>{
 app.get('/car/:id', async (req, res)=>{
     const id = req.params.id
     try {
-        const car = await pool.query('SELECT * FROM cars WHERE car_id = $1', [id])
+        const car = await pool.query('SELECT * FROM cars WHERE id = $1', [id])
     
         res.json(car)
     } catch(err) {
@@ -102,7 +102,7 @@ app.get('/reviews/:id', async (req, res)=>{
 })
 
 app.listen(port, ()=>{
-    // console.log("listening on port ", port)
+    console.log("listening on port ", port)
     // console.log("connecting to postgres pool: ", pool)
 })
 
