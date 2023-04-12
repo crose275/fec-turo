@@ -1,0 +1,19 @@
+.heart-icon{
+    position: relative;
+    box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 7px ;
+    top: 50px;
+    left: 1350px;
+    font-size: 1px;
+    background-color: #ffffff;
+    color: #f9f6f6;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    border-color: black;
+    outline: rgb(250, 248, 248) solid .1px;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+  }
