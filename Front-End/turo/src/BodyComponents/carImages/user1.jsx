@@ -3,7 +3,7 @@ import { SliderData } from "./sliderdata";
 import {CgChevronRight, CgChevronLeft} from 'react-icons/cg'
 import './image.css'
 import { HeartIcon } from "./heartComponent";
-import './heartIcon.css'
+
 import { NumberList } from "./numberList";
 
 const ImageSlider = ({ slides }) => {
@@ -23,7 +23,8 @@ const ImageSlider = ({ slides }) => {
   
     return (
       <section className='slider'>
-        <HeartIcon className='heart-icon'/>
+        <NumberList />
+        <HeartIcon />
         <CgChevronLeft className='left-arrow' onClick={prevSlide} />
         <CgChevronRight className='right-arrow' onClick={nextSlide} />
         {SliderData.map((slide, index) => {

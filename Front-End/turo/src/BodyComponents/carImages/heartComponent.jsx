@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import Heart from 'react-heart'
+import Heart from 'react-heart';
+import './heartIcon.css'
 
 
 export function HeartIcon() {

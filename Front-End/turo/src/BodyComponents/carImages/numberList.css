@@ -1,0 +1,11 @@
+.number{
+    position: absolute;
+    border: 10px;
+    background-color: #231f20;
+    color: white;
+    border: white;
+    border-radius: 99px;
+    /* border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50; */
+}
