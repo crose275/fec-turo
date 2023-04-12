@@ -10,7 +10,7 @@ export default function FooterHostingList() {
       <h2 className='header'> Hosting </h2>
       <div className='list'>
         {HostingOptions.map(option => {
-              return (<a className='option'>{option}</a>)
+              return (<a key={option} className='option'>{option}</a>)
             })}
       </div>  
     </div>

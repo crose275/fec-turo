@@ -1,15 +1,18 @@
 .FooterBottomList{
     display: flex;
     width: 100%;
-    padding: 32px;
+    padding-bottom: 32px;
 }
 
 .clickableOptions{
     display: flex;
+
 }
 
-.clickableOption{
-    margin: 30px;
+.clickableOption, .copyright{
+    margin-left: 30px;
+    font-family: 'Basis Grotesque Pro', sans-serif;
+    font-size: 12px;
 }
 
 .clickableOption:hover{

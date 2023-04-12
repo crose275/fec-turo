@@ -13,17 +13,17 @@ export default function FooterCitiesList() {
         <div className='citiesList'>
             <div className='list'>
             {Cities1.map(option => {
-                return (<a className='option'>{option}</a>)
+                return (<a key={option} className='option'>{option}</a>)
                 })}
             </div>  
             <div className='list'>
             {Cities2.map(option => {
-                return (<a className='option'>{option}</a>)
+                return (<a key={option} className='option'>{option}</a>)
                 })}
             </div> 
             <div className='list'>
             {Cities3.map(option => {
-                return (<a className='option'>{option}</a>)
+                return (<a key={option} className='option'>{option}</a>)
                 })}
             </div> 
         </div>    

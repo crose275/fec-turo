@@ -1,20 +1,25 @@
 import React from 'react'
 import './LanguageModal.css'
 
-export default function LanguageModal({ flags }) {
+export default function LanguageModal({ flags, currentLanguage, LanguageModalToggle, setcurrentLanguage, setLanguageModal }) {
 
-  const languageArray  = [];
-  for(var language in flags) {
-    languageArray.push(flags[language]);
-  }
+  const checkmarkImgSrc = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Purple_check.svg/600px-Purple_check.svg.png"
+
+function languageSelected(optionIdChosen){
+  let newCurrentLanguage = flags[optionIdChosen-1];
+  let newLanguageModal = !LanguageModalToggle;
+  setcurrentLanguage(newCurrentLanguage);
+  setLanguageModal(newLanguageModal);
+}
 
   return (
     <div className='LanguageModal'>
-      {languageArray.map(languageImgSrc => {
+      {flags.map(option => {
        return (
-        <div className='FlagLanguageSelection'>
-          <img className='flags' key={languageImgSrc} src={languageImgSrc}></img>
-          <a> English </a>
+        <div key = {option.id} className='FlagLanguageSelection' onClick={() => languageSelected(option.id)} >
+          <img className='flags' src={option.imgSrc}></img>
+          <a> {option.Language} </a>
+          <img className={option.id === currentLanguage.id ? 'checkmark-show' : 'checkmark-off'} src={checkmarkImgSrc}></img>
         </div>
        )
       })}

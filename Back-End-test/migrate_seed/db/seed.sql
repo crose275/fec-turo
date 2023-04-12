@@ -129,6 +129,7 @@ INSERT INTO cars(
     car_guidelines,
     car_tolls_fastrak,
     car_tickets,
+    car_delivery_range,
     host_id)
    VALUES ('Jeep', 
    'Wrangler', 
@@ -173,7 +174,41 @@ INSERT INTO cars(
         'If you get a ticket, notify your host as soon as possible. Every transportation authority has a different billing cycle, which means your host may not receive the ticket and send you an invoice until several months after your trip ends. That means your host may not receive notice of a ticket until long after your trip has ended. 
 
         If a host sends you an invoice, we’ll notify you via email and display a notification in your Turo activity feed. You have 48 hours to pay or dispute the invoice. Click on the link in the email or notification or open Trip details for the trip in question to view the invoice. Then tap “Accept and pay” or “Dispute.”  If you’ve booked a trip with a Commercial Host, they’re unable to invoice you for incidental costs via Turo and will contact you directly to resolve any reimbursement issues.',
+        50,
         1);
+
+
+----------------- Locations Seeding -----------------
+INSERT INTO locations( 
+    location_type,
+    location_name,
+    location_address,
+    location_cost,
+    location_lat, 
+    location_long,
+    car_id)
+   VALUES ('Pickup At Car', 'N/A', 'Oakland, CA 94621', 0, 37.712070, -122.218385, 1); 
+
+   INSERT INTO locations( 
+    location_type,
+    location_name,
+    location_address,
+    location_cost,
+    location_lat, 
+    location_long,
+    car_id)
+   VALUES ('Pickup', 'San Francisco International Airport', 'San Fransicso, CA 94128', 75, 37.621177, -122.378569, 1); 
+
+   INSERT INTO locations( 
+    location_type,
+    location_name,
+    location_address,
+    location_cost,
+    location_lat, 
+    location_long,
+    car_id)
+   VALUES ('Pickup', 'Oakland International Airport', 'San Fransicso, CA 94128', 50, 37.712070, -122.218385, 1); 
+
 
 ----------------- Features Seeding -----------------
 
