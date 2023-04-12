@@ -16,18 +16,21 @@ services:
     command: ["nodemon", "express.js"]
 
   postgres-db-turo:
-    container_name: postgres-db-turo
-    image: postgres:latest
-    restart: always
-    environment:
-      DATABASE_HOST: postgres-db-turo
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_PORT: 5432
-      POSTGRES_DB: Turo_webpage
-    ports:
-      - "5432:5432"
-
+      container_name: postgres-db-turo
+      image: postgres:latest
+      restart: always
+      environment:
+        DATABASE_HOST: postgres-db-turo
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: password
+        POSTGRES_PORT: 5432
+        POSTGRES_DB: Turo_webpage
+      ports:
+        - "5432:5432"
+      volumes:
+          # copy the sql script to create tables
+            - ./migrate_seed/db/migrate.sql:/docker-entrypoint-initdb.d/migrate.sql
+            - ./migrate_seed/db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
 
 
   pgadmin:

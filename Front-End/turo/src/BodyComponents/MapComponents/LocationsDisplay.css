@@ -1,0 +1,41 @@
+.LocationsDisplayBox{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    top: 30;
+    left: 130px;
+    width: 330px;
+    max-height: 820px;
+    min-height: 70px;
+
+    text-align: start;
+
+    padding: 16px;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.pickUpLocationsContainer, .pickUpAtCarLocationContainer{
+    display: flex;
+
+    margin: 10px;
+} 
+
+.pickUpAtCarLocationContainer, .pickUpLocationsList{
+    border-bottom: solid black 2px;
+}
+
+.LocationCost{
+    display: flex;
+    width: 40%;
+    justify-content: end;
+
+    font-weight: bold;
+}
+
+.LocationsHeader{
+    font-size: 18px;
+    font-weight: bold;
+}

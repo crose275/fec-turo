@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS cars(
     car_guidelines varchar(1000),
     car_tolls_fastrak varchar(5000),
     car_tickets varchar(5000),
+    car_delivery_range int, 
     host_id int, 
     FOREIGN KEY (host_id) REFERENCES hosts(id),
     PRIMARY KEY (id)
@@ -104,8 +105,6 @@ CREATE TABLE IF NOT EXISTS reservations(
     reservation_end_date date, 
     reservation_start_time time, 
     reservattion_end_time time, 
-    reservation_pick_up_location varchar(100),
-    reservation_drop_off_location varchar(100), 
     reservation_cost_per_day int, 
     reservation_protection_plan_fee int, 
     reservation_trip_fee int, 
@@ -125,6 +124,19 @@ CREATE TABLE IF NOT EXISTS extras(
     extra_cost int, 
     extra_description varchar(500),
     extra_name varchar(100),
+    car_id int, 
+    FOREIGN KEY (car_id) REFERENCES cars(id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS locations(
+    id serial NOT NULL, 
+    location_type varchar(50),
+    location_name varchar(500),
+    location_address varchar(500),
+    location_cost int,
+    location_lat int, 
+    location_long int,
     car_id int, 
     FOREIGN KEY (car_id) REFERENCES cars(id),
     PRIMARY KEY (id)
