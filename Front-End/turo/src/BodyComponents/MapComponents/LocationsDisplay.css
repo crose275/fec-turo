@@ -3,28 +3,46 @@
     z-index: 2;
     background-color: white;
     top: 30;
-    left: 130px;
+    left: 150px;
     width: 330px;
-    max-height: 820px;
-    min-height: 70px;
+    height: 450px;
 
     text-align: start;
-
-    padding: 16px;
 
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
+    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%);
+    padding: 12px 16px;
 }
 
-.pickUpLocationsContainer, .pickUpAtCarLocationContainer{
+.pickUpAtCarLocationContainer, .pickUpLocationsContainer, .deliveryContainer{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.pickUpAtCarLocationContainer, .pickUpLocationsContainer{
+    border-bottom: solid rgb(231, 231, 231) 2px;
+}
+
+
+.pickUpAtCarLocationContent, .pickUpLocationsContent, .deliveryContent{
     display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
-    margin: 10px;
-} 
+.LocationsHeader{
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+}
 
-.pickUpAtCarLocationContainer, .pickUpLocationsList{
-    border-bottom: solid black 2px;
+.LocationsName{
+    width: 80%;
+
+    font-family: 'Basis Grotesque Pro', sans-serif;
+    font-size: 18px;
 }
 
 .LocationCost{
@@ -33,9 +51,12 @@
     justify-content: end;
 
     font-weight: bold;
+    font-family: 'Basis Grotesque Pro', sans-serif;
 }
 
-.LocationsHeader{
-    font-size: 18px;
-    font-weight: bold;
+.FreeDeliveryDisclaimer{
+    font-size: 13px;
 }
+
+
+
