@@ -143,7 +143,7 @@ app.get('/car/:id/locations', async (req, res)=>{
     try {
         const locations = await pool.query(`SELECT * FROM locations WHERE car_id = $1`, [id])
 
-        res.json(locations)
+        res.json(locations.rows)
     } catch {
         res.status(404).send("Not Found")
     }
