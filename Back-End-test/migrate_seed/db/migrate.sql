@@ -135,8 +135,8 @@ CREATE TABLE IF NOT EXISTS locations(
     location_name varchar(500),
     location_address varchar(500),
     location_cost int,
-    location_lat int, 
-    location_long int,
+    location_lat varchar(20), 
+    location_long varchar(20),
     car_id int, 
     FOREIGN KEY (car_id) REFERENCES cars(id),
     PRIMARY KEY (id)

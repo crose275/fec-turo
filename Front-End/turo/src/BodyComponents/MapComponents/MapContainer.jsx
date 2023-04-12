@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import GoogleMapReact from 'google-map-react';
-import Circle from 'google-map-react';
 import LocationsDisplay from './LocationsDisplay';
 import './MapContainer.css';
 
+import { LocationContext } from '../../context/LocationContext';
+
 export default function Map({zoomLevel}) {
+
+  const location = useContext(LocationContext);
+  console.log(location.locationInfo);
 
   let center = {
     lat: 37.712070,
@@ -13,7 +17,7 @@ export default function Map({zoomLevel}) {
 
   return (
     <div className="map">
-        <LocationsDisplay/>
+        <LocationsDisplay location={location}/>
         <div className="google-map">
         <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyAf_3u5iBWiCgqsX5B2ue03Bu7UZxosVco", language: "en", region: "US" }}

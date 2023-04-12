@@ -26,7 +26,7 @@ const express = require('express');
 const app = express();
 app.use(express.json())
 // sets up port to first look for an env file for port number, then defaults to port 8001
-const port = process.env.PORT || 8001;
+const port = process.env.PORT || 8100;
 // imports cors for allowing cross origin requests
 const cors = require('cors');
 app.use(
