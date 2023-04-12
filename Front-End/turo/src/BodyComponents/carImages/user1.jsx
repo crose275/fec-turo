@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { SliderData } from "./sliderdata";
-import { FaAngleRight, FaAngleLeft } from 'react-icons/fa'
+import {CgChevronRight, CgChevronLeft} from 'react-icons/cg'
+import './image.css'
 
 const ImageSlider = ({ slides }) => {
     const [current, setCurrent] = useState(0);
@@ -19,8 +20,8 @@ const ImageSlider = ({ slides }) => {
   
     return (
       <section className='slider'>
-        <FaAngleLeft className='left-arrow' onClick={prevSlide} />
-        <FaAngleRight className='right-arrow' onClick={nextSlide} />
+        <CgChevronLeft className='left-arrow' onClick={prevSlide} />
+        <CgChevronRight className='right-arrow' onClick={nextSlide} />
         {SliderData.map((slide, index) => {
           return (
             <div
