@@ -9,7 +9,7 @@ export function HeartIcon() {
    
     return (
         <div className="wrapper" style={{ width: "2rem" }}>
-          <Heart className='heart-icon' isActive={active} onClick={() => setActive(!active)} style = {{fill: active ? "transparent" : "red", stroke: active ? "black":"transparent"}} />
+          <Heart className='heart-icon' isActive={active} onClick={() => setActive(!active)} style = {{fill: active ? "red" : "white", stroke: !active ? "black":"transparent"}} />
           <CSSTransition
           mountOnEnter
           unmountOnExit
@@ -17,7 +17,7 @@ export function HeartIcon() {
           timeout={{ enter: 700, exit: 700 }}
           classNames="modal"
         >
-          <h1 id='removed'>Removed from your favorites</h1>
+          <h1 id='removed'>Saved to your favorites</h1>
         </CSSTransition>
         <CSSTransition
           mountOnEnter
@@ -26,7 +26,7 @@ export function HeartIcon() {
           timeout={{ enter: 700, exit: 700 }}
           classNames="modal"
         >
-          <h1 id='saved'>Saved to your favorites</h1>
+          <h1 id='saved'>Removed from your favorites</h1>
         </CSSTransition>
         </div>
     );
