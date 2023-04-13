@@ -2,12 +2,15 @@ import React from 'react';
 import MyComponent from './header/header';
 import Footer from './FooterComponents/Footer';
 import Body from './BodyComponents/Body';
+import { LocationProvider } from './context/LocationContext';
 
 function App() {
   return (
     <div>
       <MyComponent />
-      <Body />
+      <LocationProvider>
+        <Body />
+      </LocationProvider>
       <Footer />
     </div>
   );

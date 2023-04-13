@@ -1,44 +1,39 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import GoogleMapReact from 'google-map-react';
-import LocationsPin from './LocationsPin';
-import './MapContainer.css';
 import LocationsDisplay from './LocationsDisplay';
+import './MapContainer.css';
 
+import { LocationContext } from '../../context/LocationContext';
 
 export default function Map({zoomLevel}) {
 
-  const location = {
-    address: '1600 Amphitheatre Parkway, Mountain View, california.',
-    center: {lat: 37.712070, lng: -122.218385}    
-  }
+  const location = useContext(LocationContext);
+  console.log(location.locationInfo);
 
-  const points = [
-    { id: 1, title: "Round Pond", lat: 37.712070, lng: -122.218385},
-    { id: 2, title: "Round Pond", lat: 37.621177, lng: -122.378569},
-    { id: 3, title: "Round Pond", lat: 37.712070, lng: -122.7}
-  ];
+  let center = {
+    lat: 37.712070,
+    lng: -122.218385
+  };
 
   return (
     <div className="map">
-        <LocationsDisplay/>
+        <LocationsDisplay location={location}/>
         <div className="google-map">
         <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyAf_3u5iBWiCgqsX5B2ue03Bu7UZxosVco", language: "en", region: "US" }}
-        defaultCenter={location.center}
+        defaultCenter={center}
         defaultZoom={zoomLevel}
+        yesIWantToUseGoogleMapApiInternals={true}
+        onGoogleApiLoaded={({map, maps}) =>
+          new maps.Circle({
+            strokeOpacity: 0,
+            fillColor: '#0000FF',
+            fillOpacity: 0.3,
+            map,
+            center: {lat: center.lat, lng: center.lng},
+            radius: 250,
+          })}
         >
-        {points.map(({ lat, lng, id }) => {
-            console.log(lat);
-            console.log(lng);
-          return (
-            <LocationsPin
-                key={id}
-                lat={lat}
-                lng={lng}
-                text={id}
-            />
-          );
-        })}
         </GoogleMapReact>
       </div>
     </div>
