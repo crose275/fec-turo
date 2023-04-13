@@ -10,6 +10,6 @@ export default function Body() {
     <div class='Body'>
       <ImageSlider slides={ SliderData } />
       <MapContainer zoomLevel={14}/>
-    </div>
+    </div> 
   )
 }

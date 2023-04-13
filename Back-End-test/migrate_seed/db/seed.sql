@@ -187,7 +187,7 @@ INSERT INTO locations(
     location_lat, 
     location_long,
     car_id)
-   VALUES ('Pickup At Car', 'N/A', 'Oakland, CA 94621', 0, 37.712070, -122.218385, 1); 
+   VALUES ('Pickup At Car', 'N/A', 'Oakland, CA 94621', 0, '37.712070', '-122.218385', 1); 
 
    INSERT INTO locations( 
     location_type,
@@ -197,7 +197,7 @@ INSERT INTO locations(
     location_lat, 
     location_long,
     car_id)
-   VALUES ('Pickup', 'San Francisco International Airport', 'San Fransicso, CA 94128', 75, 37.621177, -122.378569, 1); 
+   VALUES ('Pickup', 'San Francisco International Airport', 'San Fransicso, CA 94128', 75, '37.621177', '-122.378569', 1); 
 
    INSERT INTO locations( 
     location_type,
@@ -207,7 +207,7 @@ INSERT INTO locations(
     location_lat, 
     location_long,
     car_id)
-   VALUES ('Pickup', 'Oakland International Airport', 'San Fransicso, CA 94128', 50, 37.712070, -122.218385, 1); 
+   VALUES ('Pickup', 'Oakland International Airport', 'San Fransicso, CA 94128', 50, '37.712070', '-122.218385', 1); 
 
 
 ----------------- Features Seeding -----------------
