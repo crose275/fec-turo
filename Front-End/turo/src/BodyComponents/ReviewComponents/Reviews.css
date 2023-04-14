@@ -1,0 +1,21 @@
+.review-body{
+    display: block;
+}
+
+.reviews {
+    width: 619.984px;
+}
+
+.rating{
+    font-size: 38px;
+    display: flex
+}
+
+.rating-number {
+
+}
+
+.overall-rating {
+    font-size: 34px;
+    font-weight: 900;
+}
