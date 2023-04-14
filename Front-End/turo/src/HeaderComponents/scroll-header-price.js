@@ -3,7 +3,7 @@ import scrollHeader from './scroll-header';
 
 function scrollHeaderPrice() {
     return (
-      <div>
+      <div className="sticky-header">
         {scrollHeader()}
         <button className="">
           <div>Continue</div>
