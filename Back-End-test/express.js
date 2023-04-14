@@ -50,6 +50,7 @@ app.get("/", (req, res)=>{
         res.send(data.rows);
     })
 })
+
 // GET request for car photos where car_id = req param id 
 app.get('/car/:id/photos', async (req, res)=>{
     const id = req.params.id
@@ -66,14 +67,12 @@ app.get('/car/:id/photos', async (req, res)=>{
 app.get('/car/:id', async (req, res)=>{
     const id = req.params.id
     try {
-        const car = await pool.query('SELECT * FROM cars WHERE id = $1', [id])
+        const car = await pool.query('SELECT cars.*, hosts.* FROM cars JOIN hosts ON cars.host_id = hosts.id WHERE cars.id = $1', [id])
     
         res.json(car.rows)
     } catch(err) {
         res.status(404).send('Not Found')
     }
-            /* SELECT * FROM cars WHERE car_id = param id */ 
-     
 })
 
 // GET Request for host info for the owner of car
@@ -91,6 +90,7 @@ app.get('/car/:id/host', async (req, res)=>{
         res.status(404).send('Not Found')
     }
 })
+
 // GET REQUEST FOR car_features where car_id = param_id
 app.get('/car/:id/features', async (req, res)=>{
     const id = req.params.id
@@ -107,6 +107,19 @@ app.get('/car/:id/features', async (req, res)=>{
     }
         
 })
+
+// GET REQUEST FOR faqs where car_id = param_id
+app.get('/car/:id/faqs', async (req, res)=>{
+    const id = req.params.id
+    try {
+        const faqs = await pool.query(`SELECT * FROM faq WHERE faq.car_id=$1`, [id]);
+
+        res.json(faqs.rows)
+    } catch(err) {
+        res.status(404).send('Not Found')
+    }     
+})
+
 // GET Request for car_extras where car_id = req param id
 app.get('/car/:id/extras', async (req, res)=>{
     const id = req.params.id;
@@ -114,12 +127,11 @@ app.get('/car/:id/extras', async (req, res)=>{
         const extras = await pool.query('SELECT * FROM extras WHERE car_id = $1', [id])
 
         res.json(extras.rows)
-
     } catch{
         res.status(404).send('Not Found')
     }
-            /* SELECT * FROM car_extras WHERE car_id = param id */ 
 })
+
 // GET Request for reviews where car id = parm_id
 app.get('/car/:id/reviews', async (req, res)=>{
     const id = req.params.id;
@@ -135,7 +147,6 @@ app.get('/car/:id/reviews', async (req, res)=>{
     } catch{
         res.status(404).send('Not Found')
     }
-        /* SELECT * FROM reviews WHERE car_id = param id */ 
 })
 
 app.get('/car/:id/locations', async (req, res)=>{

@@ -4,7 +4,7 @@ export const LocationContext = createContext();
 
 export function LocationProvider({children}){
 
-  const [locationInfo, setlocationInfo] = useState();
+  const [locationInfo, setlocationInfo] = useState(['null']);
 
   useEffect(() => {
     fetch(`http://localhost:8100/car/1/locations`)

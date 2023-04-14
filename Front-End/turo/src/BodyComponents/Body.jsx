@@ -3,12 +3,13 @@ import'./Body.css'
 import ImageSlider from './carImages/user1'
 import { SliderData } from './carImages/sliderdata'
 import MapContainer from './MapComponents/MapContainer'
-
+import MainBody from './MainBody'
 
 export default function Body() {
   return (
     <div class='Body'>
       <ImageSlider slides={ SliderData } />
+      <MainBody />
       <MapContainer zoomLevel={14}/>
     </div> 
   )

@@ -135,10 +135,10 @@ INSERT INTO cars(
    'Wrangler', 
    2015, 
    'Unlimited Sahara',
-   '⏰ 24/7 Delivery and pick up 
+   '⏰ 24/7 Delivery and pick up
         🛩 Airport•Hotel•Residence Delivery
         ⛽️ Delivered on Full
-        🧼 Cleaned, Deodorized, & Disinfected 
+        🧼 Cleaned, Deodorized, & Disinfected
 
         ⭐️⭐️⭐️⭐️⭐️ Power Host ⭐️⭐️⭐️⭐️⭐️
 
@@ -160,9 +160,7 @@ INSERT INTO cars(
     'No pets 🐕
         No off roading 🏔
         Violation fee will be added to your statement',
-    'Tolls & Fastrak
-
-        Due to COVID-19 Bridge tolls, are not accepting Cash, Our vehicles are registered with Fastrak, payment is withdrawn from our accounts and you will be billed for tolls during your reservation. Invoices will be populated through Turo, and payment requests.
+    'Due to COVID-19 Bridge tolls, are not accepting Cash, Our vehicles are registered with Fastrak, payment is withdrawn from our accounts and you will be billed for tolls during your reservation. Invoices will be populated through Turo, and payment requests.
 
         Antioch Bridge	$6.00
         Bay Bridge	$5 weekday off peak and $6 weekend
@@ -209,6 +207,13 @@ INSERT INTO locations(
     car_id)
    VALUES ('Pickup', 'Oakland International Airport', 'San Fransicso, CA 94128', 50, '37.712070', '-122.218385', 1); 
 
+----------------- FAQ Seeding -----------------
+
+INSERT INTO faq( 
+    faq_question, 
+    faq_answer, 
+    car_id)
+   VALUES ('Can I extend my trip..', 'Yes of course, on Turo App, just go to reschedule or re modify button to do, change ASAP to avoid overlap with any other guest. ', 1);
 
 ----------------- Features Seeding -----------------
 
