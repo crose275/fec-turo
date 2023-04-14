@@ -18,4 +18,7 @@
 .overall-rating {
     font-size: 34px;
     font-weight: 900;
+    height: 44px;
+    width: 87px;
+    text-align: center;
 }
