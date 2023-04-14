@@ -5,10 +5,10 @@ import './header.css';
 function Header() {
 
   return (
-    <header className="sticky-header">
-      <div className="header__logo">
+  <div className="sticky-header">
+      <header className="header__logo">
         <img src={logo} alt="Turo Logo" style={{width: '100px'}} />
-      </div>
+      </header>
       <nav className="header__nav">
         <button type="button" aria-label="open menu" aria-haspopup="true" data-toggle="true" class="seo-pages-uda1tw e1n8mg670">
           <div aria-label="Menu" class="seo-pages-b5h863 esvnhvd1">
@@ -23,7 +23,7 @@ function Header() {
         </svg>
         <input type="text" placeholder="City, airport, address or house" style={{ color: 'black', fontWeight: 'bold' }} />
       </div>
-    </header>
+  </div>
   );
 } 
 
