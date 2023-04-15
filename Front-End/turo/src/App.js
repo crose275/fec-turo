@@ -3,6 +3,8 @@ import Header from './HeaderComponents/header'; //change this back to '.HeaderCo
 import Footer from './FooterComponents/Footer';
 import Body from './BodyComponents/Body';
 import { LocationProvider } from './context/LocationContext';
+import { ListingDetailsProvider } from './context/ListingDetailsContext';
+
 import OnScrollTrigger from './HeaderComponents/OnScrollTrigger'
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
       <OnScrollTrigger />
       <Header />
       <LocationProvider>
-        <Body />
+        <ListingDetailsProvider>
+          <Body />
+        </ListingDetailsProvider>
       </LocationProvider>
       <Footer />
     </div>

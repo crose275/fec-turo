@@ -1,0 +1,23 @@
+.listingOverallName{
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    border: solid blue 2px;
+}
+
+.carListingTitle{
+    font-size: 45px;
+
+    margin: 0%;
+}
+
+
+.carListingName{
+    display: flex;
+
+    color: rgb(185, 177, 177);
+    font-size: 18px;
+}

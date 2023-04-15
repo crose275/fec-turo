@@ -1,0 +1,21 @@
+.ListingDetails{
+    width: 50%;
+    height: fit-content;
+
+    border: solid black 2px;
+
+    margin: 20px;
+}
+
+.listingDetailsHeader{
+    margin: 0;
+    color: #121214;
+    margin-bottom: 8px;
+    text-align: left;
+    font-family: RlBasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
