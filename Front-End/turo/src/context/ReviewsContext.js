@@ -3,7 +3,7 @@ import  {useState, useEffect, createContext} from 'react';
 export const ReviewContext = createContext();
 
 export function ReviewProvider({ children }){ 
-    const [reviews, setReviews] = useState([]); 
+    const [reviews, setReviews] = useState(['null']); 
 
     useEffect(() => {
         fetch('http://localhost:8100/car/1/reviews')
