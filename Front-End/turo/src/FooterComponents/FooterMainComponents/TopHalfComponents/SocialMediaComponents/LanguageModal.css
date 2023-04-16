@@ -9,8 +9,6 @@
     display: flex;
     justify-content: left;
     align-items: center;
-
-    width: 100%;
 }
 
 .FlagLanguageSelection:hover{
@@ -22,13 +20,18 @@
     display: block;
 }
 
+.optionContainer{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
 .checkmark-show{
     display: flex;
-    height: 20px;
+    height: 15px;
     width: fit-content;
 
     justify-self: right;
-
 }
 
 .checkmark-off{

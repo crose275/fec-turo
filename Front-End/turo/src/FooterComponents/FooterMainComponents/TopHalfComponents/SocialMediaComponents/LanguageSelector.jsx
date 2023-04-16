@@ -50,7 +50,7 @@ export default function LanguageSelector() {
         <LanguageModal flags={flags} currentLanguage={currentLanguage} LanguageModalToggle={LanguageModalToggle} setcurrentLanguage={setcurrentLanguage} setLanguageModal={setLanguageModal}/>
       </div>      
       <div className='LanguageSelectorContainer' onClick={handleClick}>
-        <a className='UpArrow'>^</a>
+        <span className='UpArrow'>^</span>
         <img className="FlagIcon" src={currentLanguage.imgSrc}></img>
         <span>{currentLanguage.Language}</span>
       </div>

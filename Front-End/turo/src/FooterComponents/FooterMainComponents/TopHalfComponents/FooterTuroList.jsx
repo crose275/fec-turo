@@ -9,7 +9,7 @@ export default function FooterTuroList() {
       <h2 className='header'> Turo </h2>
       <div className='list'>
         {TuroOptions.map(option => {
-            return (<a key ={option} className='option'>{option}</a>)
+            return (<span key ={option} className='option'>{option}</span>)
           })}
       </div>      
     </div>

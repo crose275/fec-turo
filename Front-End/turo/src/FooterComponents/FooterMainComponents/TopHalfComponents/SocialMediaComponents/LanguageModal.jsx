@@ -17,9 +17,13 @@ function languageSelected(optionIdChosen){
       {flags.map(option => {
        return (
         <div key = {option.id} className='FlagLanguageSelection' onClick={() => languageSelected(option.id)} >
-          <img className='flags' src={option.imgSrc}></img>
-          <a> {option.Language} </a>
-          <img className={option.id === currentLanguage.id ? 'checkmark-show' : 'checkmark-off'} src={checkmarkImgSrc}></img>
+          <div className='optionContainer'>
+            <img className='flags' src={option.imgSrc}></img>
+            <a> {option.Language} </a>
+          </div>
+          <div className='checkMarkContainer'>
+            <img className={option.id === currentLanguage.id ? 'checkmark-show' : 'checkmark-off'} src={checkmarkImgSrc}></img>
+          </div>
         </div>
        )
       })}

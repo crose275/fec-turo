@@ -1,0 +1,12 @@
+.stars{
+    display: flex;
+}
+
+.reviewContent{
+    display: inline;
+}
+
+.reviewContainer{
+    display: grid;
+    align-content: center;
+}

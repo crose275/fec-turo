@@ -27,7 +27,7 @@ export default function Rating() {
   
     return (
       <div>
-        <div classname=''>
+        <div className=''>
             <div className="overall-rating d-flex flex-row justify-content-start">
                 <p className="align-self-center">{"5.0"}</p>
                 <Star className='mt-1' style={{color: '#593CFB'}}/>
