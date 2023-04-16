@@ -15,9 +15,8 @@ export default function SocialMediaIcons() {
       <img className='SocialMediaIcons' src={img3}></img>
       <img className='SocialMediaIcons' src={img4}></img>
       <div className='blogIconContainer'>
-        <a className='blogIcon'> BLOG </a>
+        <span className='blogIcon'> BLOG </span>
       </div>
-
     </div>
   )
 }

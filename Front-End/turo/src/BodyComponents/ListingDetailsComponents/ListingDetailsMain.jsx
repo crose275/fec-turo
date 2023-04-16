@@ -1,18 +1,20 @@
 import React, {useContext} from 'react';
 import ListingOverall from './ListingOverall';
-import HostDetails from './HostDetails';
+import HostDetails from './HostDetailsComponents/HostDetails';
 import Description from './Description'
 import Features from './Features';
-import Extras from './Extras';
+import Extras from './ExtrasComponents/Extras';
 import ParkingDetails from './ParkingDetails';
 import Guidelines from './Guidelines';
-import FAQs from './FAQs/FAQs';
+import FAQs from './FAQComponents/FAQs';
 
 import './ListingDetailsMain.css'
 
 import { ListingDetailsContext } from '../../context/ListingDetailsContext';
 import { ExtrasProvider } from '../../context/ExtrasContext';
 import { FAQProvider } from '../../context/FAQContext';
+import { FeaturesProvider } from '../../context/FeaturesContext';
+
 
 export default function ListingDetailsMain() {
 
@@ -25,7 +27,9 @@ export default function ListingDetailsMain() {
         <ListingOverall listingDetails={listingDetails}/>
         <HostDetails listingDetails={listingDetails}/>
         <Description listingDetails={listingDetails}/>
-        <Features />
+        <FeaturesProvider>
+          <Features />
+        </FeaturesProvider>
         <ExtrasProvider>
             <Extras />
         </ExtrasProvider>

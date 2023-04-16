@@ -8,9 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 export default function Reviews() {
-
-
-
     return(
         
         <div className="reviews">

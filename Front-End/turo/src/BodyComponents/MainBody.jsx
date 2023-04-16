@@ -5,11 +5,12 @@ import './MainBody.css'
 import Reviews from './ReviewComponents/ReviewMain';
 
 
+
 export default function MainBody() {
   return (
     <div className='mainBody'>
       <ListingDetailsMain />
-      <Reservation />
+        <Reservation />
     </div>
   )
 }

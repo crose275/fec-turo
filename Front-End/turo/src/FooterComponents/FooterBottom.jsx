@@ -15,10 +15,10 @@ export default function FooterBottom() {
 
     return (
       <div className='FooterBottomList'>
-        <a className='copyright'>&#169;2023 Turo</a>
+        <span className='copyright'>&#169;2023 Turo</span>
         <div className='clickableOptions'>
           {FooterBottomOptions.map(option => {
-              return (<a key={option} className='clickableOption'>{option}</a>)
+              return (<span key={option} className='clickableOption'>{option}</span>)
             })}
         </div>      
       </div>

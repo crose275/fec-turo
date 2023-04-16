@@ -1,11 +1,11 @@
 .heart-icon{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 7px ;
-    top: 50em;
-    left: 1600em;
+    top: 10%;
+    left: 90%;
     font-size: 1px;
     background-color: #ffffff;
     color: #f9f6f6;
@@ -23,7 +23,7 @@
   transition: 1s;
   top: 850px;
 } */
-  h1#removed {
+  #removed {
     font-family: Arial, Helvetica, sans-serif ;
     position:fixed;
     top:900px;
@@ -37,9 +37,9 @@
     height: 10%;
     text-align: center;
     padding: 10px 0;
-    animation: slide-up 1000ms ease-in-out, slide-down 1000ms ease-in-out 3s forwards
+    animation: slide-up 250ms ease-in-out, slide-down 250ms ease-in-out 3s forwards
   }
-  h1#saved {
+  #saved {
     font-family: Arial, Helvetica, sans-serif ;
     position:fixed;
     top:900px;
@@ -53,7 +53,7 @@
     height: 10%;
     text-align: center;
     padding: 10px 0;
-    animation: slide-up 1000ms ease-in-out, slide-down 1000ms ease-in-out 3s forwards
+    animation: slide-up 250ms ease-in-out, slide-down 250ms ease-in-out 3s forwards
   }
   @keyframes slide-up {
     from {

@@ -3,7 +3,7 @@ import {ReactComponent as Star} from './asset 60.svg'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ReviewContext } from '../../context/ReviewsContext'
-
+import './UserReviews.css';
 
 export default function UserReview({review}) {
     const [rating, setRating] = useState(review.review_rating)
@@ -23,8 +23,12 @@ export default function UserReview({review}) {
  
              <div style={{marginLeft: '10px'}}> 
             {ratingArray.map((item, index) => (
-                <Star />
+                <div key = {index}>
+                    <Star />
+                </div>
                 ))}  
+            </div>
+            <div className='reviewContent'>
                 <p>{review.user_name} {review.review_date}</p>  
                 <p>{review.review_message}</p>
             </div>   

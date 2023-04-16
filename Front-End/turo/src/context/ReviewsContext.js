@@ -13,7 +13,7 @@ export function ReviewProvider({ children }){
     }, []);
 
     return(
-        <ReviewContext.Provider value={reviews}>
+        <ReviewContext.Provider value={{reviews}}>
             {children}
         </ReviewContext.Provider>
     )
