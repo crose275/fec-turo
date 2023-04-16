@@ -1,19 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import Heart from 'react-heart';
+import { HeartContext } from "../../context/HeartContext";
 import './heartIcon.css';
 import { CSSTransition } from "react-transition-group";
 
 
 export function HeartIcon() {
-    const [active, setActive] = useState(false)
+    const [HeartInfo, setHeartInfo] = useContext(HeartContext)
    
     return (
         <div className="wrapper" style={{ width: "2rem" }}>
-          <Heart className='heart-icon' isActive={active} onClick={() => setActive(!active)} style = {{fill: active ? "red" : "white", stroke: !active ? "black":"transparent"}} />
+          <Heart className='heart-icon' isActive={HeartInfo} onClick={() => setHeartInfo(!HeartInfo)} style = {{fill: HeartInfo ? "red" : "white", stroke: !HeartInfo ? "black":"transparent"}} />
           <CSSTransition
           mountOnEnter
           unmountOnExit
-          in={active}
+          in={HeartInfo}
           timeout={{ enter: 700, exit: 700 }}
           classNames="modal"
         >
@@ -22,7 +23,7 @@ export function HeartIcon() {
         <CSSTransition
           mountOnEnter
           unmountOnExit
-          in={!active}
+          in={!HeartInfo}
           timeout={{ enter: 700, exit: 700 }}
           classNames="modal"
         >
