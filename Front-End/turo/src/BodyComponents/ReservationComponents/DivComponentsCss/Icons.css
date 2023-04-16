@@ -95,9 +95,12 @@
 
 .heart-icon-text{
     cursor: pointer;
+    position: relative;
+    top: -15px;
 }
 
 .heart-icon-2{
+    top: -15px;
     width: 30px;
     height: 30px;
     position: relative; 
