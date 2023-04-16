@@ -64,6 +64,10 @@
     margin-right: 5px;
 }
 
+.HostOverallRatingValue{
+    font-size: 17px;
+}
+
 .hostStarImage{
     height: 17px;
     width: fit-content;

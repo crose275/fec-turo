@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 import AllStarModal from './AllStarModal';
 import TrainingModal from './TrainingModal';
+import {ReactComponent as Star} from '../../ReviewComponents/asset 60.svg';
+import {ReactComponent as AllStarBadgePurple} from './AllStarBadgePurple.svg';
+import {ReactComponent as AllStarBadgeBlack} from './AllStarBadgeBlack.svg';
+import {ReactComponent as CleaningBadge} from './CleaningCertication.svg';
 
 import './HostDetails.css';
 
@@ -33,13 +37,13 @@ export default function HostDetails({listingDetails}) {
       <div className='HostOverallInfo'>
         <div className='HostIcon'>
           <div className='HostOverallRating'>
-            <span> {listingDetails.host_rating}.0</span>
-            <img className='hostStarImage' src='https://www.citypng.com/public/uploads/small/11659043898htxteiisprrvkwjwqymz58a1mvzyhy4902j07xqfse4qfktpc7kv6ecafckeyvup2gfgpiq9sievzm7dt3qacjs8q3ewunrmadj3.png'></img>
+            <span className='HostOverallRatingValue'> {listingDetails.host_rating}.0</span>
+            <Star className='hostStarImage'/>
           </div>
         </div>
         <div className='HostStats'>
           <span className='hostName'>{listingDetails.host_name}</span>
-          <span><img className='hostAll-StarBadge' src="https://www.svgrepo.com/show/1195/premium-badge.svg"></img>{listingDetails.host_badge}</span>
+          <span> <AllStarBadgeBlack />  {listingDetails.host_badge}</span>
           <div className='HostTripsAndDate'>
             <span>{listingDetails.host_trips} trips </span>
             <span class="dot"></span>
@@ -49,14 +53,14 @@ export default function HostDetails({listingDetails}) {
         </div>
       </div>
       <div className='HostRatingBadge'>
-        <img className='badgeIcon' src="https://images.squarespace-cdn.com/content/v1/5e83804992ec7778163264a4/1588468065560-K2Z25B36LE74E9J4URUA/All-star-host-badge.png"></img>
+        <AllStarBadgePurple />
         <div className='DescriptionAndButton'>
         <span>  All-Star Hosts like {listingDetails.host_name} are the top-rated and most experienced hosts on Turo. </span>
           <span className='learnMoreButton' onClick={handleAllStarClick}> Learn More </span>
         </div>
       </div>
       <div className='HostCertifications'>
-        <img className='badgeIcon' src="NoPath"></img>
+        <CleaningBadge />
         <div className='DescriptionAndButton'>
         <span> {listingDetails.host_name} has completed training on enhanced cleaning and disinfection practices. </span>
           <span className='learnMoreButton' onClick={handleTrainingClick}> Learn More </span>
