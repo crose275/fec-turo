@@ -11,7 +11,7 @@ export default function Body() {
     <div class='Body'>
         <ImageSlider slides={ SliderData } />
         <MainBody />
-        {/* < Reviews /> */}
+        < Reviews />
         <MapContainer zoomLevel={14}/>
     </div> 
   )
