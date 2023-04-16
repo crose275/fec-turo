@@ -26,7 +26,12 @@ CREATE TABLE IF NOT EXISTS cars(
     car_guidelines varchar(1000),
     car_tolls_fastrak varchar(5000),
     car_tickets varchar(5000),
+    car_number_of_trips int, 
     car_delivery_range int, 
+    car_number_of_doors int, 
+    car_mpg int, 
+    car_number_of_seats int, 
+    car_gas varchar(50),
     host_id int, 
     FOREIGN KEY (host_id) REFERENCES hosts(id),
     PRIMARY KEY (id)
@@ -77,7 +82,11 @@ CREATE TABLE IF NOT EXISTS users(
 
 CREATE TABLE IF NOT EXISTS reviews(
     id serial NOT NULL, 
-    review_rating int, 
+    review_rating_cleanliness int, 
+    review_rating_maintainence int, 
+    review_rating_communication int, 
+    review_rating_convenience int, 
+    review_rating_accuracy int, 
     review_message varchar(3000),
     review_date date, 
     review_host_response varchar(2000),
