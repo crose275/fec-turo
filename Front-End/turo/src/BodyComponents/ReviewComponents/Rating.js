@@ -1,5 +1,8 @@
 import React, {useContext, useState, useEffect} from "react";
 import { ReviewContext } from "../../context/ReviewsContext";
+import { ReactComponent as Star }  from './asset 60.svg'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 export default function Rating() {
     const reviews = useContext(ReviewContext);
@@ -24,10 +27,14 @@ export default function Rating() {
   
     return (
       <div>
-        <div>
-          <p className="overall-rating">{"5.0"}</p>
-          <p className="rating-number">({reviews.length} ratings)</p>
+        <div classname=''>
+            <div className="overall-rating d-flex flex-row justify-content-start">
+                <p className="align-self-center">{"5.0"}</p>
+                <Star className='mt-1' style={{color: '#593CFB'}}/>
+            </div>  
+
         </div>
+        <p className="rating-numberf">({reviews.length} ratings)</p>
       </div>
     );
   }
