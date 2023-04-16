@@ -2,7 +2,7 @@ const ratings = [
     {
         id: 1,
         category: "Cleanliness",
-        rating: 5
+        rating: 4
 
     },
 
