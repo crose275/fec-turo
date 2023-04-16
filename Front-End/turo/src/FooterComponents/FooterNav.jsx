@@ -18,7 +18,7 @@ export default function FooterNav() {
     <div className='FooterNav'>
       {footerNavOptions.map(option => {
           return (<div key={option} className='FooterNavOptions'>
-            <a className='FooterNavOption'> {option} </a> 
+            <span className='FooterNavOption'> {option} </span> 
             <span> &rarr; </span>
             </div>
           )

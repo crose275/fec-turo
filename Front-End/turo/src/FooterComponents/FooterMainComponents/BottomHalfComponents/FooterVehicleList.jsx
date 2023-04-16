@@ -8,7 +8,7 @@ export default function FooterVehicleList() {
         <h2 className='header'> Vehicle </h2>
         <div className='list'>
           {VehicleOptions.map(option => {
-              return (<a key={option} className='option'>{option}</a>)
+              return (<span key={option} className='option'>{option}</span>)
             })}
         </div>      
       </div>

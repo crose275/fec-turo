@@ -5,7 +5,7 @@
     top: 30;
     left: 150px;
     width: 330px;
-    height: 450px;
+    height: 520px;
 
     text-align: start;
 
@@ -49,8 +49,10 @@
     display: flex;
     width: 40%;
     justify-content: end;
+    align-items: center;
 
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 11px;
     font-family: 'Basis Grotesque Pro', sans-serif;
 }
 

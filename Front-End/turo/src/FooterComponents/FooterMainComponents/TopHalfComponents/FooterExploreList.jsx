@@ -9,7 +9,7 @@ export default function FooterExploreList() {
       <h2 className='header'> Explore </h2>
       <div className='list'>
         {ExploreOptions.map(option => {
-            return (<a key = {option} className='option'>{option}</a>)
+            return (<span key = {option} className='option'>{option}</span>)
           })}
       </div>  
     </div>

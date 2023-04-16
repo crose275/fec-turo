@@ -3,10 +3,10 @@ import ListingOverall from './ListingOverall';
 import HostDetails from './HostDetailsComponents/HostDetails';
 import Description from './Description'
 import Features from './Features';
-import Extras from './Extras';
+import Extras from './ExtrasComponents/Extras';
 import ParkingDetails from './ParkingDetails';
 import Guidelines from './Guidelines';
-import FAQs from './FAQs/FAQs';
+import FAQs from './FAQComponents/FAQs';
 
 import './ListingDetailsMain.css'
 

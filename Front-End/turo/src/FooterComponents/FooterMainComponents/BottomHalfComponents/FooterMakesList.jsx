@@ -9,7 +9,7 @@ export default function FooterMakesList() {
         <h2 className='header'> Makes </h2>
         <div className='list'>
           {MakesOptions.map(option => {
-              return (<a key={option} className='option'>{option}</a>)
+              return (<span key={option} className='option'>{option}</span>)
             })}
         </div>      
       </div>
