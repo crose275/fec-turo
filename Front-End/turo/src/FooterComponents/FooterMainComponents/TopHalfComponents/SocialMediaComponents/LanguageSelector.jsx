@@ -31,9 +31,9 @@ export default function LanguageSelector() {
       {
         id: 5,
         country: "Canada",
-        Language: "Fran" + "\u00E7" + "ais", // The "\u00E7" displays the French "ç" in html ("E7" is the hexadecimal ASCII value for the character and \u decodes the value using unicode)
+        Language: "Fran\u00E7ais", // The "\u00E7" displays the French "ç" in html ("E7" is the hexadecimal ASCII value for the character and \u decodes the value using unicode)
         imgSrc : "https://static.vecteezy.com/system/resources/previews/011/571/442/original/circle-flag-of-canada-free-png.png"
-      }
+      } 
     ]
 
     const [currentLanguage, setcurrentLanguage] = useState(flags[0])
@@ -51,7 +51,7 @@ export default function LanguageSelector() {
       </div>      
       <div className='LanguageSelectorContainer' onClick={handleClick}>
         <span className='UpArrow'>^</span>
-        <img className="FlagIcon" src={currentLanguage.imgSrc}></img>
+        <img className="FlagIcon" src={currentLanguage.imgSrc} alt="Chosen Language"></img>
         <span>{currentLanguage.Language}</span>
       </div>
     </>

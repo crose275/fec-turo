@@ -8,18 +8,10 @@
     margin-left: 40px;
 }
 
-.AppleAppIcon{
-    height: 60px;
-    width: fit-content;
-    align-items: center;
+.AppIcon{
+    margin-left: 12px;
 }
 
-.GoogleAppIcon{
-    height: 70px;
-    width: fit-content;
-    align-items: center;
-}
-
-.AppleAppIcon:hover, .GoogleAppIcon:hover{
+.AppIcon:hover{
     cursor: pointer;
 }

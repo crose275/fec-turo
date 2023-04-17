@@ -18,7 +18,7 @@ function languageSelected(optionIdChosen){
        return (
         <div key = {option.id} className='FlagLanguageSelection' onClick={() => languageSelected(option.id)} >
           <div className='optionContainer'>
-            <img className='flags' src={option.imgSrc}></img>
+            <img className='flags' src={option.imgSrc} alt="Image Of Flag"></img>
             <a> {option.Language} </a>
           </div>
           <div className='checkMarkContainer'>

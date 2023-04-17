@@ -6,7 +6,7 @@ import {ReactComponent as Star} from '../ReviewComponents/asset 60.svg';
 export default function ListingOverall({ listingDetails }) {
   return (
     <div className='listingOverallName'>
-      <h2 className='carListingTitle'> {listingDetails.car_year} {listingDetails.car_make} {listingDetails.car_model} </h2>
+      <h2 className='carListingTitle'> {listingDetails.car_make} {listingDetails.car_model} {listingDetails.car_year}  </h2>
       <span className='carListingName'> {listingDetails.car_name} </span>
       <div className='TripAndRatingStats'>
         <span className='listingOverallRating'> {listingDetails.host_rating}.0 </span>
