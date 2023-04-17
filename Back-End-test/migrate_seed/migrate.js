@@ -1,10 +1,10 @@
 const { Pool } = require("pg")
 const fs = require("fs")
 
-const POSTGRES_HOST = 'ec2-3-208-74-199.compute-1.amazonaws.com' || 'postgres'
-const POSTGRES_DB =  'db2a924gf5p4sd' || 'Turo_webpage';
-const POSTGRES_USER =  'oxubpjhkxcbbwh' || 'postgres';
-const POSTGRES_PASSWORD = 'e07dcf9f202d697e727fa8e907dbad13523c5c0386de42f3bbee94920f09fd70' || 'password';
+const POSTGRES_HOST = 'ec2-3-230-24-12.compute-1.amazonaws.com' || 'postgres'
+const POSTGRES_DB =  'd8e6g7jmq6r32' || 'Turo_webpage';
+const POSTGRES_USER =  'gwimwkvniswuuh' || 'postgres';
+const POSTGRES_PASSWORD = '80910ab4a86ca2f873bad9190e845528f80ada4a508d17b0e40cff7e9dabf2de' || 'password';
 
 // Connect to database
 const dbConfig = {
