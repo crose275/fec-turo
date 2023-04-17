@@ -135,6 +135,7 @@ INSERT INTO cars(
     car_mpg, 
     car_number_of_seats, 
     car_gas,
+    car_cost_per_day, 
     host_id)
    VALUES ('Jeep', 
    'Wrangler', 
@@ -183,8 +184,8 @@ INSERT INTO cars(
         18,
         5, 
         'Gas (Regular)',
+        79,
         1);
-
 
 ----------------- Locations Seeding -----------------
 INSERT INTO locations( 
@@ -228,10 +229,10 @@ INSERT INTO faq(
 ----------------- Features Seeding -----------------
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Must be 21+ to book', 'turo\Front-End\turo\src\media\featureIcons\21+.PNG');
+   VALUES ('Must be 21+ to book', '../../media/featureIcons/21+.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('All-wheel drive', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('All-wheel drive', 'turo/Front-End/turo/src/media/featureIcons/allWheel.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
    VALUES ('Apple Car Play', 'turo\Front-End\turo\src\media\featureIcons\appleCarPlay.PNG');
@@ -243,7 +244,7 @@ INSERT INTO features( feature_description, feature_icon)
    VALUES ('AUX Input', 'turo\Front-End\turo\src\media\featureIcons\auxInput.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Bluetooth', 'turo\Front-End\turo\src\media\featureIcons\bluetooth.PNG');
+   VALUES ('Bluetooth', '../../media/featureIcons/bluetooth.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
    VALUES ('Convertible', 'turo\Front-End\turo\src\media\featureIcons\convertible.PNG');
@@ -252,7 +253,7 @@ INSERT INTO features( feature_description, feature_icon)
    VALUES ('Heated Seats', 'turo\Front-End\turo\src\media\featureIcons\heatedseats.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Long-Term-Car', 'turo\Front-End\turo\src\media\featureIcons\longTerm.PNG');
+   VALUES ('Long-Term-Car', '../../media/featureIcons/longTerm.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
    VALUES ('Sunroof', 'turo\Front-End\turo\src\media\featureIcons\sunroof.PNG');
@@ -270,7 +271,7 @@ INSERT INTO features( feature_description, feature_icon)
    VALUES ('Child Seat', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('GPS', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('GPS', '../../media/featureIcons/allWheel.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
    VALUES ('Keyless Entry', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');

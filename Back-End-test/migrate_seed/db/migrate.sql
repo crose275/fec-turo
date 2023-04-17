@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS cars(
     car_mpg int, 
     car_number_of_seats int, 
     car_gas varchar(50),
+    car_cost_per_day int, 
     host_id int, 
     FOREIGN KEY (host_id) REFERENCES hosts(id),
     PRIMARY KEY (id)
@@ -114,7 +115,6 @@ CREATE TABLE IF NOT EXISTS reservations(
     reservation_end_date date, 
     reservation_start_time time, 
     reservattion_end_time time, 
-    reservation_cost_per_day int, 
     reservation_protection_plan_fee int, 
     reservation_trip_fee int, 
     reservation_young_driver_fee boolean, 

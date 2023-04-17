@@ -14,7 +14,7 @@ export default function Icons(){
             <span className="wrapper" onClick={() => setHeartInfo(!HeartInfo)} style={{ width: "2rem" }}>
               <Heart className='heart-icon-2' isActive={HeartInfo} onClick={() => setHeartInfo(!HeartInfo)} style = {{fill: HeartInfo ? "red" : "white", stroke: !HeartInfo ? "black":"transparent"}}/>
               <span className="heart-icon-text">
-                Add to favorites
+                { HeartInfo ? 'Remove from favorites' : 'Add to favorites'}
               </span>
               <CSSTransition
               mountOnEnter
