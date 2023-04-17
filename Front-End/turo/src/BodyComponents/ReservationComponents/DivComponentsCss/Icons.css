@@ -98,6 +98,8 @@
     cursor: pointer;
     position: relative;
     top: -15px;
+    font-weight: 700;
+    color: #414143;
 }
 
 .heart-icon-2{

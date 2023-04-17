@@ -1,36 +1,55 @@
 import React from "react";
 // import '../ReservationComponent.css';
 
+import '../DivComponentsCss/Calender.css'
+
 export default function Calender(){
+
+    const hoursOptions=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
     return(
         <div id="trip-container">
             <div id="trip-summary">
                 <div>
                     <div id="trip-start">
-                        <label> Trip Start</label>
-                            <div id="calender-row">
+                        <label className="TripHeader"> Trip Start</label>
+                            <div className="calender-row">
                                 <div id="calender">
-                                    <input type="date" />
+                                    <input className="DateInput" type="date" />
                                 </div>
                                 <div id="time">
-                                    <select name="time" id="time">
-                                        <option value="12:00">12:00</option>
-                                        <option value="12:01">12:01</option>
+                                    <select className="TimeInput" name="time" id="time">
+                                    <option value="Midnight">Midnight</option>
+                                        {hoursOptions.map((hour) => {
+                                                return (
+                                                    <option value={hour}>{hour}:00 AM </option>
+                                                 )})
+                                        }
+                                         <option value="Noon">Noon</option>
+                                        {hoursOptions.map((hour) => {
+                                                return (
+                                                    <option value={hour}>{hour}:00 PM </option>
+                                                 )})
+                                        }
                                     </select>
                                 </div>
                             </div>
                     </div>
                     <div id="trip-end">
-                    <label> Trip End</label>
+                    <label className="TripHeader"> Trip End</label>
                         <div className="calender-row">
                             <div className="calender">
-                                <input type="date" />
+                                <input className="DateInput" type="date" />
                             </div>
                             <div className="time">
-                                <select name="time" className="time">
-                                    <option value="12:00">12:00</option>
-                                    <option value="12:01">12:01</option>
-                                </select>
+                            <select className="TimeInput" name="time" id="time">
+                                        <option value="Noon">Noon</option>
+                                        {hoursOptions.map((hour) => {
+                                                return (
+                                                    <option value={hour}>{hour}:00 PM </option>
+                                                 )})
+                                        }
+                                    </select>
                             </div>
                         </div>
                     </div>

@@ -21,35 +21,37 @@ export default function Features() {
 
   return (
     <>
-      <div className={fullFeaturesState ? 'FullFeaturesContainer' : 'MinimizedFeaturesContainer'}>
-        <div className='FeaturesContainer'>
-            <h2 className='listingDetailsHeader'> Features </h2>
-            <div className='featuresContent'>
-              <div className='FeaturesColumn1'>
-                {featuresDetailsColumn1.map((feature) => {
-                  return(
-                    <div key={feature.id} className="featureContainer">
-                      <img alt="Feature Icon"></img>
-                      <span className='featureName'>{feature.feature_description}</span>
-                    </div>
-                  )
-                })} 
-              </div>
-              <div className='FeaturesColumn2'>
-                {featuresDetailsColumn2.map((feature) => {
+      <div className='FeaturesOverviewContainer'>      
+        <div className={fullFeaturesState ? 'FullFeaturesContainer' : 'MinimizedFeaturesContainer'}>
+          <div className='FeaturesContainer'>
+              <h2 className='listingDetailsHeader'> Features </h2>
+              <div className='featuresContent'>
+                <div className='FeaturesColumn1'>
+                  {featuresDetailsColumn1.map((feature) => {
                     return(
-                      <div key={feature.id} className="featureContainer" >
-                        <img alt="Feature Icon"></img>
+                      <div key={feature.id} className="featureContainer">
+                        <img src={feature.feature_icon}alt="Feature Icon"></img>
                         <span className='featureName'>{feature.feature_description}</span>
                       </div>
                     )
-                  })}
+                  })} 
+                </div>
+                <div className='FeaturesColumn2'>
+                  {featuresDetailsColumn2.map((feature) => {
+                      return(
+                        <div key={feature.id} className="featureContainer" >
+                          <img alt="Feature Icon"></img>
+                          <span className='featureName'>{feature.feature_description}</span>
+                        </div>
+                      )
+                    })}
+                </div>
               </div>
-            </div>
+          </div>
+          <span className='AppleCarPlayDisclaimer'> Apple CarPlay is a registered trademark of Apple Inc.  </span>
         </div>
-        <span className='AppleCarPlayDisclaimer'> Apple CarPlay is a registered trademark of Apple Inc.  </span>
-      </div>
-      <span className='FeaturesMoreButton' onClick={handleClick}>{fullFeaturesState ? 'Less': 'More'}</span>
+        <span className='FeaturesMoreButton' onClick={handleClick}>{fullFeaturesState ? 'Less': 'More'}</span>
+     </div>
     </>
   )
 }

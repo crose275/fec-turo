@@ -39,3 +39,7 @@ display: block;
     right: 5px;
     cursor: pointer;
 }
+
+.insuranceContainer{
+    margin-bottom: 20px;
+}
