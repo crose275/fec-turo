@@ -3,7 +3,8 @@ import { ReviewContext } from '../../context/ReviewsContext'
 import  Button  from 'react-bootstrap/button'
 import UserReview from './UserReview'
 
-export default function ReviewBody() {
+export default function ReviewBody({overallRating}) {
+    const rating = useState(overallRating)
     const ReviewsContext = useContext(ReviewContext)
     const reviews = ReviewsContext.reviews
     console.log("reviews: "  + reviews)
@@ -11,9 +12,11 @@ export default function ReviewBody() {
     const [activeReviews, setActiveReviews] = useState([null]);
 
     
+
+    
     useEffect(()=>{
         setActiveReviews(reviews.slice(0, numToShow))
-    }, [reviews])
+    }, [ReviewsContext])
 
   
     
@@ -24,15 +27,20 @@ export default function ReviewBody() {
         setActiveReviews(reviews.slice(0, newNumToShow));
         setNumToShow(newNumToShow);
       };
-
-    return (
+      return (
+      activeReviews ? (
+        // If activeReviews is truthy, return the following JSX:
         <div>
             {console.log(activeReviews)}
             <p style={{fontSize: '12px', fontWeight: 900, color: '#767677'}}>Reviews</p>
-            {reviews.map((review)=>{  
-            return <UserReview review={review}/>
-        })}
-            < Button variant='primary' onClick={showMoreReviews}>See more</Button>
+            {activeReviews.map((review)=>{  
+                return <UserReview review={review} rating={rating}/>
+            })}
+            <Button variant='primary' onClick={showMoreReviews}>See more</Button>
         </div>
+    ) : (
+        // If activeReviews is falsy, return an empty fragment:
+        <></>
+    )
     )
 }

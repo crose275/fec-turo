@@ -4,22 +4,20 @@ import { ReactComponent as Star }  from './asset 60.svg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-export default function Rating() {
+export default function Rating(props) {
+    console.log(props)
     const reviews = useContext(ReviewContext);
+
+    
     console.log(reviews)
     // const [overallRating, setOverallRating] = useState(null);
     // // const [ratings, setRatings] = useState(
     // //   reviews ?  : []
     // // );
   
-    // useEffect(() => {
-    //     if (reviews) {
-    //         const ratings = () => reviews.map((review) => {
-    //             review.rating;
-    //          })  
-    //       const sum = ratings.reduce((total, rating) => total + rating, 0);
-    //       const average = sum / ratings.length;
-    //       setOverallRating(average);
+    useEffect(()=>{
+      console.log(reviews)
+    }, [reviews])
         
 
     //     } console.log(overallRating)
@@ -29,12 +27,12 @@ export default function Rating() {
       <div>
         <div className=''>
             <div className="overall-rating d-flex flex-row justify-content-start">
-                <p className="align-self-center">{"5.0"}</p>
+                <p className="align-self-center">{props.overallRating}.0</p>
                 <Star className='mt-1' style={{color: '#593CFB'}}/>
             </div>  
 
         </div>
-        <p className="rating-numberf">({reviews.length} ratings)</p>
+        <p className="rating-numberf">(35 ratings)</p>
       </div>
     );
   }
