@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import ListingOverall from './ListingOverall';
+import ListingCarStats from './ListingCarStatsComponents/ListingCarStats';
 import HostDetails from './HostDetailsComponents/HostDetails';
 import Description from './Description'
 import Features from './Features';
@@ -25,6 +26,7 @@ export default function ListingDetailsMain() {
   return (
     <div className='ListingDetails'>
         <ListingOverall listingDetails={listingDetails}/>
+        <ListingCarStats listingDetails={listingDetails} />
         <HostDetails listingDetails={listingDetails}/>
         <Description listingDetails={listingDetails}/>
         <FeaturesProvider>

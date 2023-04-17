@@ -30,14 +30,14 @@ export default function Extras() {
           <h2 className='listingDetailsHeader'> Extras </h2>
           <div className='ExtrasDisclaimerContainer'>
             <span className='ExtrasDisclaimer'> Add optional Extras to your trip at checkout. </span>
-            <img className='extrasQuestionMark' src="https://cdn-icons-png.flaticon.com/512/0/827.png" onClick={handleQustionMarkClick}></img>
+            <img className='extrasQuestionMark' src="https://cdn-icons-png.flaticon.com/512/0/827.png" onClick={handleQustionMarkClick} alt="Question Mark"></img>
           </div>  
           {extrasDetails.map((extra) => {
             return(
                 <div key={extra.id} className='extraContainer'>
                     <span className='extraTitle'> {extra.extra_name} </span>
                     <span className='extraDescription'> {extra.extra_description} </span>
-                    <div className='extraCostAvailable'>
+                    <div key={Date.now()} className='extraCostAvailable'>
                         <span className='extraCost'> ${extra.extra_cost}/trip </span>
                         <span className={extra.extra_number_available > 0 ? 'extraNumberAvailable' : 'displayOff'}>{extra.extra_number_available} available </span>
                     </div>

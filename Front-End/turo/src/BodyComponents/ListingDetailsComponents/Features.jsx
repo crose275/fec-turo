@@ -29,17 +29,17 @@ export default function Features() {
                 {featuresDetailsColumn1.map((feature) => {
                   return(
                     <div key={feature.id} className="featureContainer">
-                      <img></img>
+                      <img alt="Feature Icon"></img>
                       <span className='featureName'>{feature.feature_description}</span>
                     </div>
                   )
-                })}
+                })} 
               </div>
               <div className='FeaturesColumn2'>
                 {featuresDetailsColumn2.map((feature) => {
                     return(
                       <div key={feature.id} className="featureContainer" >
-                        <img></img>
+                        <img alt="Feature Icon"></img>
                         <span className='featureName'>{feature.feature_description}</span>
                       </div>
                     )

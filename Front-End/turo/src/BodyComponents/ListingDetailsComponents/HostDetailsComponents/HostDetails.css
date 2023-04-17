@@ -64,6 +64,10 @@
     margin-right: 5px;
 }
 
+.HostOverallRatingValue{
+    font-size: 17px;
+}
+
 .hostStarImage{
     height: 17px;
     width: fit-content;
@@ -79,14 +83,20 @@
     border-radius: 50%;
 }
 
-.HostRatingBadge, .HostCertifications{
+.HostRatingBadge{
     display: flex;
 
     margin: 10px;
 }
 
+.HostCertifications{
+    display: flex;
+    margin: 10px 10px 50px 10px;
+}
+
 .DescriptionAndButton{
     display: grid;
+    margin-left: 10px;
 }
 
 .learnMoreButton{
@@ -97,7 +107,6 @@
 .learnMoreButton:hover{
     cursor: pointer;
 }
-
 
 .badgeIcon{
     height: 50px;
