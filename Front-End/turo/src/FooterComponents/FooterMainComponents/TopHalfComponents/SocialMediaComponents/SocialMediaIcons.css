@@ -19,9 +19,12 @@
 }
 
 .blogIconContainer{
-    border: solid black 2px;
+    border: solid black 1px;
     border-radius: 5px;
-    padding: 3px;
+    padding: 1px 3px 1px 3px;
+
+    font-size: 11px;
+    margin-left: 12px;
 }
 
 .blogIcon:hover{
