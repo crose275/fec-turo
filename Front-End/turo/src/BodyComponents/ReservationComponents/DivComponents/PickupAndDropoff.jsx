@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../DivComponentsCss/PickupAndDropoff.css"
 import Dropdown from 'react-bootstrap/Dropdown'
 import { IoCarOutline } from "react-icons/io5";
@@ -6,13 +6,16 @@ import { IoAirplaneOutline } from "react-icons/io5";
 import { FiMapPin } from "react-icons/fi";
 
 export default function PickupAndDropoff() {
+    const [location, setLocation] = useState("Oakland International Airport ")
+    const [autoCollapse, setautoCollapse] = useState(true)
+
     return(
         <div id="PickupAndDropoff-container">
             <div>
                 <label id="MainPickup">Pick up and return location</label>
-                <Dropdown >
+                <Dropdown autoClose={autoCollapse}>
                     <Dropdown.Toggle id="toggle" variant="success">
-                        Oakland International Airport
+                        {location}
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu id="menu">
@@ -20,7 +23,7 @@ export default function PickupAndDropoff() {
                             PICKUP AT CAR LOCATION
                         </p>
                         <Dropdown.Item id="item">
-                           <button className="buttons">
+                           <button className="buttons" onClick={() => setLocation("Oakland, CA 94621")}>
                             <span className="logo">
                                 <IoCarOutline/>
                             </span>
@@ -40,7 +43,7 @@ export default function PickupAndDropoff() {
                             <div id="pickup2">
                                 PICKUP LOCATION
                             </div>
-                            <Dropdown.Item id="item">
+                            <Dropdown.Item id="item" onClick={() => setLocation("San Francisco International Airport")}>
                                 <button className="buttons1">
                                     <span className="logo">
                                         <IoAirplaneOutline/>
@@ -58,7 +61,7 @@ export default function PickupAndDropoff() {
                                     </span>
                             </button>
                             </Dropdown.Item>
-                            <Dropdown.Item id="item">
+                            <Dropdown.Item id="item" onClick={() => setLocation("Oakland International Airport")}>
                             <button className="buttons1">
                                     <span className="logo">
                                         <IoAirplaneOutline/>
@@ -80,7 +83,7 @@ export default function PickupAndDropoff() {
                                 delivered to you
                             </div>
                             {/* <Dropdown.Divider autoClose={false}/> */}
-                            <Dropdown.Item id="item" >
+                            <Dropdown.Item id="item" onClick={() => setLocation( ) }>
                                 <button className="buttons" >
                                     <span className="logo">
                                         <FiMapPin/>
