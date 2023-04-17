@@ -5,18 +5,19 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { ReviewContext } from '../../context/ReviewsContext'
 import './UserReviews.css';
 
-export default function UserReview({review}) {
-    const [rating, setRating] = useState(review.review_rating)
+export default function UserReview({review, rating}) {
+    const [userRating, setRating] = useState(rating)
     const [ratingArray, setRatingArray]= useState(Array.from({length: rating}, (v, i) => i))
     console.log(rating)
     // creates an array of numbers with length of rating. 
-    // useEffect(()=>{
-    //     setRatingArray(Array.from({length: rating}, (v, i) => i));
-    //     console.log(ratingArray)
-    // })
+    useEffect(()=>{
+        setRatingArray(Array.from({length: userRating}, (v, i) => i));
+        console.log(ratingArray)
+    }, [userRating])
 
-
+    
     return (
+        review ? (
         <div className='d-flex align-content-center' style={{width: '100%', border: "1px solid black", borderBottom: '1px solid  #E7E7E8'}}>
             <div style={{borderRadius: '15984px', border: "1px solid black", height: '48px', width: '48px'}}></div>
             {/*renders star components based on the length of ratingArray*/} 
@@ -36,5 +37,6 @@ export default function UserReview({review}) {
 
             
         </div>
+        ) : (<></>)
     )
 }
