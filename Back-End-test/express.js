@@ -1,10 +1,10 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-    user: 'oxubpjhkxcbbwh' || 'postgres',
-    host: 'ec2-3-208-74-199.compute-1.amazonaws.com'||'127.0.0.1',
-    database: 'db2a924gf5p4sd' || 'Turo_webpage',
-    password: 'e07dcf9f202d697e727fa8e907dbad13523c5c0386de42f3bbee94920f09fd70' || 'password',
+    user: 'gwimwkvniswuuh' || 'postgres',
+    host: 'ec2-3-230-24-12.compute-1.amazonaws.com'||'127.0.0.1',
+    database: 'd8e6g7jmq6r32' || 'Turo_webpage',
+    password: '80910ab4a86ca2f873bad9190e845528f80ada4a508d17b0e40cff7e9dabf2de' || 'password',
     port: 5432,
     connectionString: process.env.DATABASE_URL, 
     ssl: {
