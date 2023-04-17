@@ -4,7 +4,8 @@ import  Button  from 'react-bootstrap/button'
 import UserReview from './UserReview'
 
 export default function ReviewBody() {
-    const reviews = useContext(ReviewContext)
+    const ReviewsContext = useContext(ReviewContext)
+    const reviews = ReviewsContext.reviews
     console.log("reviews: "  + reviews)
     const [numToShow, setNumToShow] = useState(5);
     const [activeReviews, setActiveReviews] = useState([null]);
