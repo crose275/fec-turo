@@ -1,5 +1,5 @@
 import React from 'react';
-import scrollHeader from './scroll-header';
+import scrollHeader from './secondHeader';
 
 function scrollHeaderPrice() {
     return (

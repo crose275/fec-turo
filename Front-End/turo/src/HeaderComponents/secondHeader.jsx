@@ -1,8 +1,9 @@
-import React from 'react';
+import './header.css'
 import logo from './Uro-logo.png';
-import './scroll-header.css'
+import './secondHeader.css'
+//import Header from './header'
 
-function scrollHeader() {
+function secondHeader() {
 
   return (
     <header className="sticky-header">
@@ -11,23 +12,20 @@ function scrollHeader() {
       </div>
       
   <button className="header-button">
-    <div className="header-tab">overview</div>
+    <div className="header-tab">OVERVIEW</div>
   </button>
-
   <button className="header-button">
-    <div className="header-tab">features</div>
+    <div className="header-tab">FEATURES</div>
   </button>
-
   <button className="header-button">
-    <div className="header-tab">reviews</div>
+    <div className="header-tab">REVIEWS</div>
   </button>
-
   <button className="header-button">
-    <div className="header-tab">location</div>
+    <div className="header-tab">LOCATION</div>
   </button>
-
     </header>
   );
+  
 } 
 
-export default scrollHeader; 
+export default secondHeader; 
