@@ -18,7 +18,7 @@ INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_p
    VALUES ('Christina', 'password', 'christina.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Christina.jpeg'); 
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Sam', 'password' , 'sam.fake@gmail.com', 23, 'turo\Front-End\turo\src\media\profileIcons\SamIcon.PNG');
+   VALUES ('Sam', 'password' , 'sam.fake@gmail.com', 23, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Sam.jpeg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
    VALUES ('Nelson', 'password' , 'nelson.fake@gmail.com', 28, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Nelson.jpg');
