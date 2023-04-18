@@ -24,6 +24,7 @@
 }
 
 .see-more{
+
     background-color: #593CFB;
     height: 34px;
     width: 101.625px;
@@ -31,6 +32,13 @@
     color:  #FFFFFF;
 
     
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .overall-rating {

@@ -2,8 +2,9 @@
     display: inline;
 }
 
-.reviewContent{
+.review-content{
     display: inline;
+    margin-left: 10px;
 }
 
 .reviewContainer{
@@ -11,8 +12,21 @@
     align-content: center;
 }
 
+.review-body{
+    display: grid;
+}
+
+
 .review-date{
     font-size: 12px;
     color: #898989;
+}
+
+.star-row {
+    display: flex;
+}
+
+.user-review {
+    display: flex;
 }
 

@@ -27,21 +27,22 @@ export default function UserReview({review, rating}) {
     
     return (
         review ? (
-        <div className='d-flex align-content-center' style={{width: '100%', border: "1px solid black", borderBottom: '1px solid  #E7E7E8'}}>
-            <div style={{borderRadius: '15984px', border: "1px solid black", height: '48px', width: '48px'}}></div>
+        <div className='user-review' style={{width: '100%', border: "1px solid black", borderBottom: '1px solid  #E7E7E8'}}>
+            <img src={review.picture}  style={{borderRadius: '15984px', border: "1px solid black", height: '48px', width: '48px'}}></img>
             {/*renders star components based on the length of ratingArray*/} 
- 
-             <div style={{marginLeft: '10px'}}> 
-            {ratingArray.map((item, index) => (
-                <div className='row' key = {index}>
-                    {/* <Star className="star" /> */}
+            <div className='review-body'>
+                <div className='star-row' style={{marginLeft: '10px'}}> 
+                {ratingArray.map((item, index) => (
+                    <div className='row' key = {index}>
+                        <Star className="star" />
+                    </div>
+                    ))}  
                 </div>
-                ))}  
-            </div>
-            <div className='reviewContent'>
-                <p>{review.user_name} <span className='review-date'>{formattedDate}</span></p>  
-                <p>{review.review_message}</p>
-            </div>   
+                <div className='review-content'>
+                    <p>{review.user_name} <span className='review-date'>{formattedDate}</span></p>  
+                    <p>{review.review_message}</p>
+                </div>  
+            </div> 
              
 
             
