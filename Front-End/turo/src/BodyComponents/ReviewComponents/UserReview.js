@@ -43,8 +43,7 @@ export default function UserReview({review, rating}) {
                     <p>{review.review_message}</p>
                 </div>
                 <div className={review.review_host_response === null ? "display-off" : "display-on"}>
-                    <h3 style={{fontSize: '16px'}}>Carima's response</h3>
-                    <br></br>
+                    <h3 style={{fontSize: '16px', fontWeight: 900}}>Carima's response</h3>
                     <p style={{}}>{review.review_host_response}</p>
                 </div>  
             </div> 
