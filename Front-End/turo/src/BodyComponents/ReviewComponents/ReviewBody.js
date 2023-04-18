@@ -37,7 +37,9 @@ export default function ReviewBody({overallRating, reviews}) {
             {activeReviews.map((review)=>{  
                 return <UserReview className="user-review" review={review} rating={overallRating}/>
             })}
-            <button className='see-more' variant='primary' onClick={showMoreReviews}>See more</button>
+            <div className='button-container'>
+                <button className='see-more' variant='primary' onClick={showMoreReviews}>See more</button>
+            </div>
         </div>
     ) : (
         // If activeReviews is falsy, return an empty fragment:
