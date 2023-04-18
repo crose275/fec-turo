@@ -19,7 +19,7 @@ export default function ReservationInforamtion() {
     const [hours, setHours] = useState(0)
     return(
         <div>
-            <PricePerDay />
+            <PricePerDay hours = {hours}/>
             <Line />
             <Calender setHours = {setHours} />
             <PickupAndDropoff />
@@ -28,7 +28,7 @@ export default function ReservationInforamtion() {
             <Line />
             <Canceled hours = {hours}/>
             <Line />
-            <Distance />
+            <Distance hours = {hours}/>
             <Line />
             <InsurancePlan />
             <Line />
