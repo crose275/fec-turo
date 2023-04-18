@@ -1,5 +1,5 @@
-.stars{
-    display: flex;
+.star{
+    display: inline;
 }
 
 .reviewContent{
@@ -10,3 +10,9 @@
     display: grid;
     align-content: center;
 }
+
+.review-date{
+    font-size: 12px;
+    color: #898989;
+}
+
