@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { ReviewContext } from '../../context/ReviewsContext'
-import  Button  from 'react-bootstrap/button'
 import './ReviewMain.css'
 import UserReview from './UserReview'
 

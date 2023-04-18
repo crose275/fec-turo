@@ -1,30 +1,26 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import {ReactComponent as Star} from './asset 60.svg'
-import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { ReviewContext } from '../../context/ReviewsContext'
 import './UserReviews.css';
 
 export default function UserReview({review, rating}) {
-    const [userRating, setRating] = useState(rating)
-    const [ratingArray, setRatingArray]= useState(Array.from({length: rating}, (v, i) => i))
+    const [userRating, setRating] = useState(rating);
+    const [ratingArray, setRatingArray] = useState([]);
     const [formattedDate, setFormattedDate] = useState('');
 
+    useEffect(() => {
+        setRatingArray(Array.from({length: userRating}, (_, i) => i));
+    }, [userRating]);
 
-    // creates an array of numbers with length of rating. 
-    useEffect(()=>{
-        if(review){
-        const reviewDate = new Date(review.review_date);
-        const options = { year: 'numeric', month: 'long', day: 'numeric'};
-        const newDate = reviewDate.toLocaleDateString('en-US', options);
-        setFormattedDate(newDate)
+    useEffect(() => {
+        if (review) {
+            const reviewDate = new Date(review.review_date);
+            const options = { year: 'numeric', month: 'long', day: 'numeric'};
+            const newDate = reviewDate.toLocaleDateString('en-US', options);
+            setFormattedDate(newDate);
         }
-        console.log(ratingArray)
-        setRatingArray(Array.from({length: userRating}, (v, i) => i));
+    }, [review]);
 
-    }, [userRating])
-
-    
     return (
         review ? (
         <div className='user-review' style={{width: '100%', borderBottom: '1px solid #E7E7E8'}}>
