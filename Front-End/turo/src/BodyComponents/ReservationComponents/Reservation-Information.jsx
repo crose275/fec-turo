@@ -18,7 +18,7 @@ import Line from "./DivComponents/Line"
 export default function ReservationInforamtion() {
     const [hours, setHours] = useState(0)
     return(
-        <div>
+        <div id= "reservation">
             <PricePerDay hours = {hours}/>
             <Line />
             <Calender setHours = {setHours} />

@@ -1,7 +1,8 @@
 .ReservationComponentMain{
     width: 319px;
     margin: 30px;
-    
+    position: relative;
+    top: 10px;
     /* border: solid blue 2px; */
 }
 
