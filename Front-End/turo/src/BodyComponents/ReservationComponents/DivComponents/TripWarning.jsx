@@ -10,7 +10,7 @@ export default function TripWarning({hours}) {
         if(hours >=1){
             return ""
         }else{
-            return "This car has a minimum trip length requirement. Please extend your trip until 10:30 AM on April 24 to book this car."
+            return "This car has a minimum trip length requirement. Please extend for 48 hours."
         }
     }
     

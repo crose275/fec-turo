@@ -7,14 +7,15 @@ import '../DivComponentsCss/PricePerDay.css';
 import '../ReservationComponent.css';
 
 
-export default function PricePerDay() {
+export default function PricePerDay({hours}) {
 
     const context = useContext(ListingDetailsContext);
     const listingDetails = context.listingDetailsInfo[0];
 
     const costPerDay = listingDetails.car_cost_per_day;
     const pickUpFee = 75;
-    const numberOfDays = 1;
+    
+    const numberOfDays = hours;
     const totalPrice = (costPerDay * numberOfDays) + pickUpFee;
 
     const [priceCalculatorModal, togglepriceCalculatorModal] = useState(false);
