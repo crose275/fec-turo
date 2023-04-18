@@ -7,7 +7,7 @@ export function ListingDetailsProvider({children}){
   const [listingDetailsInfo, setListingDetailsInfo] = useState(['null']);
 
   useEffect(() => {
-    fetch(`https://localhost:8100/car/1`)
+    fetch(`http://localhost:8100/car/1`)
      .then((response) => {
         return response.json()
     })

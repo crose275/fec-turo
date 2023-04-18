@@ -7,7 +7,7 @@ export function FAQProvider({children}){
   const [FAQInfo, setFAQInfo] = useState(['null']);
 
   useEffect(() => {
-    fetch(`https://localhost:8100/car/1/faqs`)
+    fetch(`http://localhost:8100/car/1/faqs`)
      .then((response) => {
         return response.json()
     })

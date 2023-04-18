@@ -7,7 +7,7 @@ export function FeaturesProvider({children}){
   const [featuresInfo, setFeaturesInfo] = useState(['null']);
 
   useEffect(() => {
-    fetch(`https://localhost:8100/car/1/features`)
+    fetch(`http://localhost:8100/car/1/features`)
      .then((response) => {
         return response.json()
     })

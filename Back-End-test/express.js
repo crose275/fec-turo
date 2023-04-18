@@ -1,24 +1,21 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-    user: 'gwimwkvniswuuh' || 'postgres',
-    host: 'ec2-3-230-24-12.compute-1.amazonaws.com'||'127.0.0.1',
-    database: 'd8e6g7jmq6r32' || 'Turo_webpage',
-    password: '80910ab4a86ca2f873bad9190e845528f80ada4a508d17b0e40cff7e9dabf2de' || 'password',
+    user: 'postgres',
+    host: 'postgres-db-turo',
+    database: 'Turo_webpage',
+    password: 'password',
     port: 5432,
-    connectionString: process.env.DATABASE_URL, 
-    ssl: {
-        rejectUnauthorized: false
-    }
+
 });
 
-pool.connect((err, client, release) => {
-    if (err) {
-      return console.error('Error acquiring client', err.stack)
-    }
-    console.log(process.env.DATABASE_URL)
-    console.log('Connected to database')
-  })
+// pool.connect((err, client, release) => {
+//     if (err) {
+//       return console.error('Error acquiring client', err.stack)
+//     }
+//     console.log(process.env.DATABASE_URL)
+//     console.log('Connected to database')
+//   })
 
 // imports express 
 const express = require('express');
@@ -26,7 +23,7 @@ const express = require('express');
 const app = express();
 app.use(express.json())
 // sets up port to first look for an env file for port number, then defaults to port 8001
-const port = process.env.PORT || 8100;
+const port = 8100;
 // imports cors for allowing cross origin requests
 const cors = require('cors');
 app.use(
@@ -36,6 +33,7 @@ app.use(
   );
 // imports and mounts body-parser middleware to access contents of request body
 const bodyParser = require('body-parser');
+const { error } = require('console');
 
 app.use(bodyParser.json());
 
@@ -144,7 +142,8 @@ app.get('/car/:id/reviews', async (req, res)=>{
 
         res.json(reviews.rows)
 
-    } catch{
+    } catch(error){
+        console.error(error)
         res.status(404).send('Not Found')
     }
 })

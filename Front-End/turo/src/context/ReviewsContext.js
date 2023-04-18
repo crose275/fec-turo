@@ -6,7 +6,7 @@ export function ReviewProvider({ children }){
     const [reviews, setReviews] = useState(['null']); 
 
     useEffect(() => {
-        fetch('https://localhost:8100/car/1/reviews')
+        fetch('http://localhost:8100/car/1/reviews')
             .then(response => response.json())
             .then(data => setReviews(data))
             .catch(error => console.error(error))

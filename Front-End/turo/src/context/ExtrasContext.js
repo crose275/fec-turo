@@ -7,7 +7,7 @@ export function ExtrasProvider({children}){
   const [extrasInfo, setExtrasInfo] = useState(['null']);
 
   useEffect(() => {
-    fetch(`https://localhost:8100/car/1/extras`)
+    fetch(`http://localhost:8100/car/1/extras`)
      .then((response) => {
         return response.json()
     })
