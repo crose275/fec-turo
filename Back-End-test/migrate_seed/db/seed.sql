@@ -21,100 +21,100 @@ INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_p
    VALUES ('Sam', 'password' , 'sam.fake@gmail.com', 23, 'turo\Front-End\turo\src\media\profileIcons\SamIcon.PNG');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Nelson', 'password' , 'nelson.fake@gmail.com', 28, 'No file');
+   VALUES ('Nelson', 'password' , 'nelson.fake@gmail.com', 28, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Nelson.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Calvin', 'password' , 'calvin.fake@gmail.com', 30, 'No file');
+   VALUES ('Calvin', 'password' , 'calvin.fake@gmail.com', 30, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Calvin.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Salma', 'password' , 'salma.fake@gmail.com', 22, 'No file');
+   VALUES ('Salma', 'password' , 'salma.fake@gmail.com', 22, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Salma.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Carlotta', 'password' , 'carlotta.fake@gmail.com', 25, 'No file');
+   VALUES ('Carlotta', 'password' , 'carlotta.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Carlotta.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Trevor', 'password' , 'trevor.fake@gmail.com', 27, 'No file');
+   VALUES ('Trevor', 'password' , 'trevor.fake@gmail.com', 27, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Trevor.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Marcella', 'password' , 'marcella.fake@gmail.com', 25, 'No file');
+   VALUES ('Marcella', 'password' , 'marcella.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Marcella.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Fionnuala', 'password' , 'fionnuala.fake@gmail.com', 25, 'No file');
+   VALUES ('Fionnuala', 'password' , 'fionnuala.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Fionnuala.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Anna', 'password' , 'anna.fake@gmail.com', 25, 'No file');
+   VALUES ('Anna', 'password' , 'anna.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Anna.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Sarah', 'password' , 'sarah.fake@gmail.com', 25, 'No file');
+   VALUES ('Sarah', 'password' , 'sarah.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Sarah.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Henry', 'password' , 'henry.fake@gmail.com', 25, 'No file');
+   VALUES ('Henry', 'password' , 'henry.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Henry.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Trevor', 'password' , 'trevor.fake@gmail.com', 25, 'No file');
+   VALUES ('Trevor', 'password' , 'trevor.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Trevor(2).jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Michelle', 'password' , 'michelle.fake@gmail.com', 25, 'No file');
+   VALUES ('Michelle', 'password' , 'michelle.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Michelle.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Turo', 'password' , 'turo.fake@gmail.com', 00, 'No file');
+   VALUES ('Turo', 'password' , 'turo.fake@gmail.com', 00, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Turo.webp');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Steven', 'password' , 'steven.fake@gmail.com', 30, 'No file');
+   VALUES ('Steven', 'password' , 'steven.fake@gmail.com', 30, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Steven.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Torian', 'password' , 'torian.fake@gmail.com', 28, 'No file');
+   VALUES ('Torian', 'password' , 'torian.fake@gmail.com', 28, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Torian.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Jason', 'password' , 'jason.fake@gmail.com', 35, 'No file');
+   VALUES ('Jason', 'password' , 'jason.fake@gmail.com', 35, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Jason.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Isamel', 'password' , 'isamel.fake@gmail.com', 20, 'No file');
+   VALUES ('Isamel', 'password' , 'isamel.fake@gmail.com', 20, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Isamel.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Samantha', 'password' , 'samantha.fake@gmail.com', 40, 'No file');
+   VALUES ('Samantha', 'password' , 'samantha.fake@gmail.com', 40, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Samantha.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Marta', 'password' , 'marta.fake@gmail.com', 38, 'No file');
+   VALUES ('Marta', 'password' , 'marta.fake@gmail.com', 38, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Marta.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Gregg', 'password' , 'turo.fake@gmail.com', 24, 'No file');
+   VALUES ('Gregg', 'password' , 'turo.fake@gmail.com', 24, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Gregg.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Andrea', 'password' , 'andrea.fake@gmail.com', 30, 'No file');
+   VALUES ('Andrea', 'password' , 'andrea.fake@gmail.com', 30, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Andrea.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Phillip', 'password' , 'phillip.fake@gmail.com', 32, 'No file');
+   VALUES ('Phillip', 'password' , 'phillip.fake@gmail.com', 32, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Phillip.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Justin', 'password' , 'turo.fake@gmail.com', 40, 'No file');
+   VALUES ('Justin', 'password' , 'turo.fake@gmail.com', 40, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Justin.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Kitty', 'password' , 'kitty.fake@gmail.com', 30, 'No file');
+   VALUES ('Kitty', 'password' , 'kitty.fake@gmail.com', 30, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Kitty.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Shaween', 'password' , 'shaween.fake@gmail.com', 22, 'No file');
+   VALUES ('Shaween', 'password' , 'shaween.fake@gmail.com', 22, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Shaween.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Kacie', 'password' , 'kacie.fake@gmail.com', 35, 'No file');
+   VALUES ('Kacie', 'password' , 'kacie.fake@gmail.com', 35, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Kacie.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Alizabeth', 'password' , 'alizabeth.fake@gmail.com', 30, 'No file');
+   VALUES ('Alizabeth', 'password' , 'alizabeth.fake@gmail.com', 30, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Alizabeth.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Bryan', 'password' , 'bryan.fake@gmail.com', 40, 'No file');
+   VALUES ('Bryan', 'password' , 'bryan.fake@gmail.com', 40, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Bryan.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Grant', 'password' , 'grant.fake@gmail.com', 32, 'No file');
+   VALUES ('Grant', 'password' , 'grant.fake@gmail.com', 32, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Grant.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Ramon', 'password' , 'ramon.fake@gmail.com', 33, 'No file');
+   VALUES ('Ramon', 'password' , 'ramon.fake@gmail.com', 33, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Ramon.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Joseph', 'password' , 'joseph.fake@gmail.com', 32, 'No file');
+   VALUES ('Joseph', 'password' , 'joseph.fake@gmail.com', 32, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Joseph.jpg');
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Ramesh', 'password' , 'ramesh.fake@gmail.com', 31, 'No file');
+   VALUES ('Ramesh', 'password' , 'ramesh.fake@gmail.com', 31, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Ramesh.jpg');
    
 -------------- Car Listing Seeding -------------
 INSERT INTO cars(
@@ -229,64 +229,64 @@ INSERT INTO faq(
 ----------------- Features Seeding -----------------
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Must be 21+ to book', '../../media/featureIcons/21+.PNG');
+   VALUES ('Must be 21+ to book', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/21%2B.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('All-wheel drive', 'turo/Front-End/turo/src/media/featureIcons/allWheel.PNG');
+   VALUES ('All-wheel drive', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/allWheel.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Apple Car Play', 'turo\Front-End\turo\src\media\featureIcons\appleCarPlay.PNG');
+   VALUES ('Apple Car Play', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/appleCarPlay.PNG');
    
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Automic transmission', 'turo\Front-End\turo\src\media\featureIcons\automatic.PNG');
+   VALUES ('Automic transmission', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/automatic.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('AUX Input', 'turo\Front-End\turo\src\media\featureIcons\auxInput.PNG');
+   VALUES ('AUX Input', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/auxInput.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Bluetooth', '../../media/featureIcons/bluetooth.PNG');
+   VALUES ('Bluetooth', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/bluetooth.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Convertible', 'turo\Front-End\turo\src\media\featureIcons\convertible.PNG');
+   VALUES ('Convertible', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/convertible.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Heated Seats', 'turo\Front-End\turo\src\media\featureIcons\heatedseats.PNG');
+   VALUES ('Heated Seats', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/heatedseats.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Long-Term-Car', '../../media/featureIcons/longTerm.PNG');
+   VALUES ('Long-Term-Car', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/longTerm.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Sunroof', 'turo\Front-End\turo\src\media\featureIcons\sunroof.PNG');
+   VALUES ('Sunroof', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/sunroof.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('USB Charger', 'turo\Front-End\turo\src\media\featureIcons\usbCharger.PNG');
+   VALUES ('USB Charger', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/usbCharger.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Leather Seats', 'turo\Front-End\turo\src\media\featureIcons\generic.PNG');
+   VALUES ('Leather Seats', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/generic.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Backup Camera', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('Backup Camera', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/backupCamera.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Child Seat', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('Child Seat', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/childSeat.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('GPS', '../../media/featureIcons/allWheel.PNG');
+   VALUES ('GPS', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/gps.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Keyless Entry', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('Keyless Entry', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/keylessEntry.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Snow tires or chains', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('Snow tires or chains', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/snowTires.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Toll Pass', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('Toll Pass', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/tollBooth.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('USB Input', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('USB Input', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/usbPlug.PNG');
 
 INSERT INTO features( feature_description, feature_icon)
-   VALUES ('Fastrak', 'turo\Front-End\turo\src\media\featureIcons\allWheel.PNG');
+   VALUES ('Fastrak', 'https://turoimages.s3.us-east-2.amazonaws.com/featureicons/generic.PNG');
 
 ----------------- Car Features Seeding -----------------
 
