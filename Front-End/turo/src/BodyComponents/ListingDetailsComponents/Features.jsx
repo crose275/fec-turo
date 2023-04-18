@@ -30,7 +30,7 @@ export default function Features() {
                   {featuresDetailsColumn1.map((feature) => {
                     return(
                       <div key={feature.id} className="featureContainer">
-                        <img src="https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Christina.jpeg" alt="Feature Icon" />
+                        <img src={feature.feature_icon} alt="Feature Icon" className='FeatureIcon' />
                         <span className='featureName'>{feature.feature_description}</span>
                       </div>
                     )
@@ -40,7 +40,7 @@ export default function Features() {
                   {featuresDetailsColumn2.map((feature) => {
                       return(
                         <div key={feature.id} className="featureContainer" >
-                          <img alt="Feature Icon"></img>
+                          <img src={feature.feature_icon}alt="Feature Icon" className='FeatureIcon'></img>
                           <span className='featureName'>{feature.feature_description}</span>
                         </div>
                       )
