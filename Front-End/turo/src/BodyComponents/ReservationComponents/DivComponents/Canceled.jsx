@@ -5,7 +5,10 @@ import { BsHandThumbsUp } from "react-icons/bs"
 export default function Canceled(){
     return(
         <div>
+            <span>
             <BsHandThumbsUp id="thumb"/>
+            </span>
+            <span>
             <div id="rows">
                 <div id="FreeCancel">
                     Free cancellation
@@ -14,6 +17,8 @@ export default function Canceled(){
                 24 hrs from the start date
                 </div>
             </div>
+
+            </span>
         </div>
     )
 }

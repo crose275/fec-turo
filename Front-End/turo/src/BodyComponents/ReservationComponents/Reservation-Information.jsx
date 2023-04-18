@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import PricePerDay from "./DivComponents/PricePerDay";
 import Calender from "./DivComponents/Calender";
 import PickupAndDropoff from "./DivComponents/PickupAndDropoff";
@@ -12,19 +12,21 @@ import Report from "./DivComponents/Report";
 import Line from "./DivComponents/Line"
 
 
+
 // different components merged into one
 
 export default function ReservationInforamtion() {
+    const [hours, setHours] = useState(0)
     return(
         <div>
             <PricePerDay />
             <Line />
-            <Calender />
+            <Calender setHours = {setHours} />
             <PickupAndDropoff />
-            <TripWarning />
-            <ContinueButton />
+            <TripWarning hours = {hours}/>
+            <ContinueButton hours = {hours} />
             <Line />
-            <Canceled />
+            <Canceled hours = {hours}/>
             <Line />
             <Distance />
             <Line />

@@ -12,7 +12,7 @@ export default function PickupAndDropoff() {
     return(
         <div id="PickupAndDropoff-container">
             <div>
-                <label id="MainPickup">Pick up and return location</label>
+                <label id="MainPickup">Pickup & return location</label>
                 <Dropdown autoClose={autoCollapse}>
                     <Dropdown.Toggle id="toggle" variant="success">
                         {location}
@@ -101,23 +101,6 @@ export default function PickupAndDropoff() {
                             </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-            
-                
-                
-                
-                {/* <button 
-                aria-haspopup="listbox" 
-                aria-controls="locations" 
-                aria-expanded="false" 
-                aria-label="Location Picker"
-                role="combobox"
-                className="locationBox"
-                >
-                    <option value="location">texas</option>
-                    <p>
-                        Oakland International Airport
-                    </p>
-                </button> */}
             </div>
         </div>
     )    
