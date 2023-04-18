@@ -3,8 +3,14 @@
 }
 
 .display-on{
-    display: flex;
-    background-color: #898989;
+    display: block;
+    background-color: #F4F4F4;
+    margin-left: 10px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    justify-content: start;
+    padding: 16px;
+    width: 90%;
 }
 
 .star{
@@ -37,5 +43,6 @@
 
 .user-review {
     display: flex;
+    margin-top: 35px;
 }
 

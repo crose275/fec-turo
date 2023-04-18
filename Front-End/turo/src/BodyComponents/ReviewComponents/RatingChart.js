@@ -63,7 +63,7 @@ export default function RatingChart({reviews}){
     <div className="rating-chart" style={{width: "100%"}}>
       {console.log(ratings)}
       {ratings.map((rating) => (
-        <div className='rating-container' key={rating.id} style={{border: "1px solid black"}}>
+        <div className='rating-container' key={rating.id}>
           <div>
             <span className='rating-category'>{rating.category}</span>
           </div>
