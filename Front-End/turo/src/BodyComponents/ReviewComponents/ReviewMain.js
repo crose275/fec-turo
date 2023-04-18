@@ -11,12 +11,11 @@ export default function Reviews() {
     const reviewsContext = useContext(ReviewContext);
     console.log("reviewsContext: " + reviewsContext)
     const reviews = reviewsContext.reviews
+    console.log("reviews: " + reviews)
     const [overallRating, setOverallRating] = useState(0)
 
     useEffect(() => {
-        console.log(reviews)
       if(reviews.length > 1)  {
-        console.log(reviews)
       const reviewKeys = [
         'review_rating_cleanliness',
         'review_rating_maintainence',
@@ -26,15 +25,12 @@ export default function Reviews() {
       ]
   
       const ratingSum = reviews.reduce((acc, review) => {
-        console.log("rating review: " + review)
         const reviewRatingSum = reviewKeys.reduce((sum, key) => {
           return sum + review[key]
         }, 0)
-        console.log(reviewRatingSum)
         const reviewRatingAverage = reviewRatingSum / reviewKeys.length
         return acc + reviewRatingAverage
       }, 0)
-      console.log()
 
       const newOverallRating = ratingSum / reviews.length
       setOverallRating(newOverallRating)
@@ -42,11 +38,7 @@ export default function Reviews() {
     }, [reviews])
    
 
-
-    
-
-    return(
-        
+    return(        
         <div className="reviews">
                 <div className="d-flex justify-content-center" style={{width: 1423, border: "1px solid black"}}>
                     <div style={{width: 620, border: "1px solid black"}}>

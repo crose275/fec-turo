@@ -30,7 +30,7 @@ export default function Features() {
                   {featuresDetailsColumn1.map((feature) => {
                     return(
                       <div key={feature.id} className="featureContainer">
-                        <img src={feature.feature_icon}alt="Feature Icon"></img>
+                        <img src="https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Christina.jpeg" alt="Feature Icon" />
                         <span className='featureName'>{feature.feature_description}</span>
                       </div>
                     )

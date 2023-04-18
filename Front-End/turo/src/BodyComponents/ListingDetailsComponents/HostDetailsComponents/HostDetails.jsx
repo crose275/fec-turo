@@ -14,12 +14,10 @@ export default function HostDetails({listingDetails}) {
   const [TrainingModalState, toggleTrainingModal] = useState(false);
 
   function handleAllStarClick(){
-      console.log("all star clicked");
       toggleAllStarModal(!AllStarModalState);
   }
 
   function handleTrainingClick(){
-    console.log("training clicked");
     toggleTrainingModal(!TrainingModalState);
 
   }
