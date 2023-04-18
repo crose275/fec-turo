@@ -6,17 +6,25 @@
     width: 100%;
     display: flex;
     justify-content: left;
+    align-items: center;
     
 }
 
 .rating-category {
     display: flex;
-    width: 150px;
-    border: 1px solid red;
+    width: 130px;
+    /* border: 1px solid red; */
     justify-content: start;
 }
 
 .rating-bar{
     margin-top: 4px;
     margin-left: 2px;
+}
+
+.rating-value {
+    display: flex;
+    justify-content: center;
+
+    width: 65px;
 }
