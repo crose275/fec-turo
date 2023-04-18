@@ -7,7 +7,7 @@ export function ExtrasProvider({children}){
   const [extrasInfo, setExtrasInfo] = useState(['null']);
 
   useEffect(() => {
-    fetch(`http://localhost:8100/car/1/extras`)
+    fetch(`https://turo-backend-db.herokuapp.com/car/1/extras`)
      .then((response) => {
         return response.json()
     })
