@@ -12,28 +12,10 @@ export default function Icons(){
     function HeartIconFavorites () {
         return (
             <span className="wrapper" onClick={() => setHeartInfo(!HeartInfo)} style={{ width: "2rem" }}>
-              <Heart className='heart-icon-2' isActive={HeartInfo} onClick={() => setHeartInfo(!HeartInfo)} style = {{fill: HeartInfo ? "red" : "white", stroke: !HeartInfo ? "black":"transparent"}}/>
+              <Heart className='heart-icon-2' isActive={HeartInfo} onClick={() => setHeartInfo(!HeartInfo)} style = {{fill: HeartInfo ? "black" : "white", stroke: !HeartInfo ? "black":"transparent"}}/>
               <span className="heart-icon-text">
                 { HeartInfo ? 'Remove from favorites' : 'Add to favorites'}
               </span>
-              <CSSTransition
-              mountOnEnter
-              unmountOnExit
-              in={HeartInfo}
-              timeout={{ enter: 700, exit: 700 }}
-              classNames="modal"
-            >
-              <h1 id='removed'>Saved to your favorites</h1>
-            </CSSTransition>
-            <CSSTransition
-              mountOnEnter
-              unmountOnExit
-              in={!HeartInfo}
-              timeout={{ enter: 700, exit: 700 }}
-              classNames="modal"
-            >
-              <h1 id='saved'>Removed from your favorites</h1>
-            </CSSTransition>
             </span>
         );
       }
