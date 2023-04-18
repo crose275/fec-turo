@@ -15,7 +15,7 @@ INSERT INTO hosts(
 
 --------------- User Seeding --------------
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
-   VALUES ('Christina', 'password', 'christina.fake@gmail.com', 25, 'No file'); 
+   VALUES ('Christina', 'password', 'christina.fake@gmail.com', 25, 'https://turoimages.s3.us-east-2.amazonaws.com/User+Profile+Pics/Christina.jpeg'); 
 
 INSERT INTO users(user_name, user_password, user_email, user_age, user_profile_pic)
    VALUES ('Sam', 'password' , 'sam.fake@gmail.com', 23, 'turo\Front-End\turo\src\media\profileIcons\SamIcon.PNG');
