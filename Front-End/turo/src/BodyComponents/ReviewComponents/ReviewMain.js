@@ -46,7 +46,7 @@ export default function Reviews() {
             {console.log(reviews)}
                 <div className="review-container">
                     <div >
-                        <p className="align" style={{height: '12px', fontSize: '12px', fontWeight: '900'}}>RATINGS AND REVIEWS</p>
+                        <p className="review-header" style={{height: '12px', fontSize: '12px', fontWeight: '900', marginBottom: '8px'}}>RATINGS AND REVIEWS</p>
                         <Rating  overallRating={overallRating}/>
                         <RatingChart reviews={reviews}/>
                         <p style={{fontSize: 12, color: '#767677'}}>Based on 35 guest ratings</p>

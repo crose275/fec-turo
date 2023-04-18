@@ -32,7 +32,7 @@ export default function Rating(props) {
             </div>  
 
         </div>
-        <p className="rating-numberf">(35 ratings)</p>
+        <p className="rating-number">(35 ratings)</p>
       </div>
     );
   }
