@@ -8,11 +8,20 @@ import './UserReviews.css';
 export default function UserReview({review, rating}) {
     const [userRating, setRating] = useState(rating)
     const [ratingArray, setRatingArray]= useState(Array.from({length: rating}, (v, i) => i))
-    console.log(rating)
+    const [formattedDate, setFormattedDate] = useState('');
+
+
     // creates an array of numbers with length of rating. 
     useEffect(()=>{
-        setRatingArray(Array.from({length: userRating}, (v, i) => i));
+        if(review){
+        const reviewDate = new Date(review.review_date);
+        const options = { year: 'numeric', month: 'long', day: 'numeric'};
+        const newDate = reviewDate.toLocaleDateString('en-US', options);
+        setFormattedDate(newDate)
+        }
         console.log(ratingArray)
+        setRatingArray(Array.from({length: userRating}, (v, i) => i));
+
     }, [userRating])
 
     
@@ -24,13 +33,13 @@ export default function UserReview({review, rating}) {
  
              <div style={{marginLeft: '10px'}}> 
             {ratingArray.map((item, index) => (
-                <div key = {index}>
-                    <Star />
+                <div className='row' key = {index}>
+                    {/* <Star className="star" /> */}
                 </div>
                 ))}  
             </div>
             <div className='reviewContent'>
-                <p>{review.user_name} {review.review_date}</p>  
+                <p>{review.user_name} <span className='review-date'>{formattedDate}</span></p>  
                 <p>{review.review_message}</p>
             </div>   
              

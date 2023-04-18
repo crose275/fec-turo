@@ -8,7 +8,7 @@ export function ReviewProvider({ children }){
     useEffect(() => {
         fetch('http://localhost:8100/car/1/reviews')
             .then(response => response.json())
-            .then(data => (data))
+            .then(data => setReviews(data))
             .catch(error => console.error(error))
     }, []);
 

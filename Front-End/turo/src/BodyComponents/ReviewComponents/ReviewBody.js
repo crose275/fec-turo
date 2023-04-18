@@ -1,12 +1,13 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { ReviewContext } from '../../context/ReviewsContext'
 import  Button  from 'react-bootstrap/button'
+import './ReviewMain.css'
 import UserReview from './UserReview'
 
-export default function ReviewBody({overallRating}) {
+export default function ReviewBody({overallRating, reviews}) {
     const rating = useState(overallRating)
-    const ReviewsContext = useContext(ReviewContext)
-    const reviews = ReviewsContext.reviews
+    // const ReviewsContext = useContext(ReviewContext)
+    // const reviews = ReviewsContext.reviews
     console.log("reviews: "  + reviews)
     const [numToShow, setNumToShow] = useState(5);
     const [activeReviews, setActiveReviews] = useState([null]);
@@ -16,7 +17,7 @@ export default function ReviewBody({overallRating}) {
     
     useEffect(()=>{
         setActiveReviews(reviews.slice(0, numToShow))
-    }, [ReviewsContext])
+    }, [reviews])
 
   
     
@@ -34,9 +35,9 @@ export default function ReviewBody({overallRating}) {
             {console.log(activeReviews)}
             <p style={{fontSize: '12px', fontWeight: 900, color: '#767677'}}>Reviews</p>
             {activeReviews.map((review)=>{  
-                return <UserReview review={review} rating={rating}/>
+                return <UserReview className="user-review" review={review} rating={overallRating}/>
             })}
-            <Button variant='primary' onClick={showMoreReviews}>See more</Button>
+            <button className='see-more' variant='primary' onClick={showMoreReviews}>See more</button>
         </div>
     ) : (
         // If activeReviews is falsy, return an empty fragment:
