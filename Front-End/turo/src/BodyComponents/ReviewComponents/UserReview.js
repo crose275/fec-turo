@@ -27,8 +27,8 @@ export default function UserReview({review, rating}) {
     
     return (
         review ? (
-        <div className='user-review' style={{width: '100%', border: "1px solid black", borderBottom: '1px solid  #E7E7E8'}}>
-            <img src={review.picture}  style={{borderRadius: '15984px', border: "1px solid black", height: '48px', width: '48px'}}></img>
+        <div className='user-review' style={{width: '100%', borderBottom: '1px solid #E7E7E8'}}>
+            <img src={review.picture}  style={{borderRadius: '15984px', height: '48px', width: '48px'}}></img>
             {/*renders star components based on the length of ratingArray*/} 
             <div className='review-body'>
                 <div className='star-row' style={{marginLeft: '10px'}}> 
@@ -41,6 +41,9 @@ export default function UserReview({review, rating}) {
                 <div className='review-content'>
                     <p>{review.user_name} <span className='review-date'>{formattedDate}</span></p>  
                     <p>{review.review_message}</p>
+                </div>
+                <div className={review.review_host_response === null ? "display-off" : "display-on"}>
+                    <p>{review.review_host_response}</p>
                 </div>  
             </div> 
              

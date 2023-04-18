@@ -3,10 +3,11 @@ const RatingBar = ({ rating }) => {
   
     return (
 
-            <div style={{width:"70%", height: '8px', backgroundColor: '#ddd' }}>
+            <div style={{width:"70%", height: '8px', backgroundColor: '#ddd'}}>
                 <div style={{ width: `${filledWidth}%`, height: '8px', backgroundColor: '#593CFB', borderRadius: '8px' }} />
  
-        </div>
+            </div>
+    
         );
   };
   

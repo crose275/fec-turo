@@ -41,11 +41,11 @@ export default function Reviews() {
     }, [reviews])
    
 
-    return(        
+    return(
         <div className="reviews">
             {console.log(reviews)}
-                <div className="review-container" style={{border: "1px solid black"}}>
-                    <div style={{border: "1px solid black"}}>
+                <div className="review-container">
+                    <div >
                         <p className="align" style={{height: '12px', fontSize: '12px', fontWeight: '900'}}>RATINGS AND REVIEWS</p>
                         <Rating  overallRating={overallRating}/>
                         <RatingChart reviews={reviews}/>

@@ -1,3 +1,12 @@
+.display-off {
+    display: none;
+}
+
+.display-on{
+    display: flex;
+    background-color: #898989;
+}
+
 .star{
     display: inline;
 }
