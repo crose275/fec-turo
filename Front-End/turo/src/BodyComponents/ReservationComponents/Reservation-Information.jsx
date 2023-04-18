@@ -28,7 +28,7 @@ export default function ReservationInforamtion() {
             <Line />
             <Canceled hours = {hours}/>
             <Line />
-            <Distance />
+            <Distance hours = {hours}/>
             <Line />
             <InsurancePlan />
             <Line />
